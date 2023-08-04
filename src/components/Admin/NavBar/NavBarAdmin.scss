@@ -1,0 +1,56 @@
+.navbar {
+  border-right: 1px solid #ccc;
+  min-height: 80vh;
+  font-family: "Courier New", Courier, monospace;
+
+  &__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem;
+    background-color: lightblue;
+  }
+  &__name {
+    font-size: 10px;
+    text-align: center;
+    
+  }
+
+  &__list{
+    margin: 0;
+    padding: 0;
+   
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+     &:hover{
+        background-color:rgba(255, 68, 0, 0.204) ;
+      }
+
+    
+      &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10px;
+        height: 100%;
+        background-color: orangered;
+      }
+  }
+  &__item {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    position: relative;
+    list-style-type: none;
+    font-size: 20px;
+
+
+  }
+
+
+}
