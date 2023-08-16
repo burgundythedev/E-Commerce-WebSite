@@ -5,11 +5,17 @@ import { db } from "../../../firebase/Config";
 import { toast } from "react-toastify";
 import Loader from "../../../Loader/Loader";
 import "./ProductDetails.scss";
+import {
+  ADD_TO_CART,
+  SUBTOTAL_ITEM_CALCULATOR,
+  selectCartProducts,
+} from "../../../store/slice/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-
+  const cartItems = useSelector(selectCartProducts);
   const getProduct = async () => {
     const docRef = doc(db, "products", id);
     const docSnap = await getDoc(docRef);
@@ -21,10 +27,15 @@ const ProductDetails = () => {
       toast.error("Can't display Product Details");
     }
   };
-
+  const dispatch = useDispatch();
   useEffect(() => {
     getProduct();
   });
+  const handleAddToCart = (product) => {
+    dispatch(ADD_TO_CART(product));
+
+    dispatch(SUBTOTAL_ITEM_CALCULATOR());
+  };
 
   return (
     <div className="details">
@@ -53,9 +64,12 @@ const ProductDetails = () => {
               </div>
               <p className="details__description">{product.description}</p>
               <div className="details__add">
-                <button className="details__incremente">+</button>
-                <p className="details__number">1</p>
-                <button className="details__decremente">-</button>
+                <button
+                  className="details__add"
+                  onClick={() => handleAddToCart(product)}
+                >
+                  ADD TO CART
+                </button>
               </div>
             </div>
           </div>

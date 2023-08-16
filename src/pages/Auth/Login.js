@@ -6,17 +6,28 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 import auth from "../../firebase/Config";
 import Loader from "../../Loader/Loader";
+import { useSelector } from "react-redux";
+import { selectPrevUrl } from "../../store/slice/cartSlice";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const previousUrl = useSelector(selectPrevUrl);
   const navigate = useNavigate();
   const onTypeEmail = (event) => {
     setEmail(event.target.value);
   };
   const onTypePassword = (event) => {
     setPassword(event.target.value);
+  };
+
+  const navigateUser = () => {
+    if (previousUrl.includes("cart")) {
+      return navigate("/cart");
+    } else {
+      navigate("/");
+    }
   };
   const loginUser = getAuth(auth);
   const userLogin = (event) => {
@@ -31,7 +42,7 @@ const Login = () => {
       .then((userCredential) => {
         setIsLoading(false);
         toast.success("Welcome to your account!");
-        navigate("/");
+        navigateUser();
       })
       .catch((error) => {
         setIsLoading(false);
@@ -60,6 +71,7 @@ const Login = () => {
                 type="email"
                 placeholder="Email"
                 required
+                autoComplete="username"
                 onChange={onTypeEmail}
                 value={email}
               />
@@ -70,6 +82,7 @@ const Login = () => {
                 type="password"
                 placeholder="Password"
                 required
+                autoComplete="current-password"
                 value={password}
                 onChange={onTypePassword}
               />

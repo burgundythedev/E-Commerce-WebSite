@@ -38,11 +38,11 @@ const ProductList = ({ list, toggleFilterVisibility, isFilterVisible }) => {
             }}
             className="product-list__icon"
           />
-        </div>
-        <div>
-          <button onClick={toggleFilterVisibility}>
-            {isFilterVisible ? "Hide Filter" : "Show Filter"}
-          </button>
+          <div>
+            <button onClick={toggleFilterVisibility}>
+              {isFilterVisible ? "Hide Filter" : "Show Filter"}
+            </button>
+          </div>
         </div>
         <div className="product-list__sort">
           <label htmlFor="sort-select" className="product-list__label">

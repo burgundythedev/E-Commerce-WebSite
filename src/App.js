@@ -14,6 +14,7 @@ import {
   ProductDetails,
 } from "./pages/index";
 import Product from "./pages/Product/Product";
+import Cart from "./pages/Cart/Cart";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           />
           <Route path="/product-details/:id" element={<ProductDetails />} />
           <Route path="/products" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </BrowserRouter>

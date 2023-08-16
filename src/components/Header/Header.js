@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Header.scss";
 import logo from "../../assets/img/logo-website.jpg";
@@ -10,14 +10,22 @@ import auth from "../../firebase/Config";
 import { CONNECTED_USER, DISCONNECT_USER } from "../../store/slice/authSlice";
 import ShowLogin, { HideLogin } from "../DisplayLinks/ShowLogin";
 import { AdminOnlyLink } from "../Admin/AdminRoute/AdminRoute";
+import {
+  SUBTOTAL_ITEM_CALCULATOR,
+  selectCartTotalItems,
+} from "../../store/slice/cartSlice";
 
 const Header = () => {
   const [displayName, setDisplayName] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const cartQuantity = useSelector(selectCartTotalItems);
+
+  useEffect(() => {
+    dispatch(SUBTOTAL_ITEM_CALCULATOR());
+  }, [dispatch, cartQuantity]);
 
   const logout = getAuth(auth);
-
   const onLogOut = () => {
     signOut(logout)
       .then(() => {
@@ -154,7 +162,7 @@ const Header = () => {
                     alt="cartlogo"
                     className="header__cart-logo"
                   />
-                  <p className="header__text">0</p>
+                  <p className="header__text">{cartQuantity}</p>
                 </NavLink>
                 <ShowLogin>
                   <p className="header__userName">Hi, {displayName}</p>

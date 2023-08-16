@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ProductItem.scss";
+import { useDispatch } from "react-redux";
+import {
+  ADD_TO_CART,
+  SUBTOTAL_ITEM_CALCULATOR,
+} from "../../../store/slice/cartSlice";
 
 const ProductItem = ({
   id,
@@ -11,13 +16,29 @@ const ProductItem = ({
   description,
   brand,
   category,
+  product,
 }) => {
+  const dispatch = useDispatch();
   const shortText = (text, n) => {
     if (text.length > n) {
       const shortenedText = text.substring(0, n).concat("...");
       return shortenedText;
     }
     return text;
+  };
+  const addProducts = () => {
+    dispatch(
+      ADD_TO_CART({
+        id,
+        name,
+        price,
+        imageUrl,
+        description,
+        brand,
+        category,
+      })
+    );
+    dispatch(SUBTOTAL_ITEM_CALCULATOR(product));
   };
 
   const itemClass = grid ? "item__grid" : "item item--list";
@@ -39,7 +60,9 @@ const ProductItem = ({
           {!grid && (
             <p className="item__description">{shortText(description, 150)}</p>
           )}
-          <button className="item__button">Add</button>
+          <button className="item__button" onClick={() => addProducts()}>
+            Add
+          </button>
         </div>
       </div>
     </div>
