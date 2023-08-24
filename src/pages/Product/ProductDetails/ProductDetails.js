@@ -1,36 +1,24 @@
-import { doc, getDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { db } from "../../../firebase/Config";
-import { toast } from "react-toastify";
 import Loader from "../../../Loader/Loader";
 import "./ProductDetails.scss";
 import {
   ADD_TO_CART,
   SUBTOTAL_ITEM_CALCULATOR,
-  selectCartProducts,
 } from "../../../store/slice/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import useFetchDetails from "../../../customHooks/useFetchDetails";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const cartItems = useSelector(selectCartProducts);
-  const getProduct = async () => {
-    const docRef = doc(db, "products", id);
-    const docSnap = await getDoc(docRef);
-
-    if (docSnap.exists()) {
-      const dataItem = { id: id, ...docSnap.data() };
-      setProduct(dataItem);
-    } else {
-      toast.error("Can't display Product Details");
-    }
-  };
   const dispatch = useDispatch();
+  const { details } = useFetchDetails("products", id);
+
   useEffect(() => {
-    getProduct();
-  });
+    setProduct(details);
+  }, [details]);
+
   const handleAddToCart = (product) => {
     dispatch(ADD_TO_CART(product));
 

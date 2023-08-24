@@ -18,6 +18,8 @@ import {
   CheckoutSuccess,
   CheckoutSummary,
   OrderHistory,
+  OrderDetails,
+  ReviewProduct,
 } from "./pages/index";
 
 const App = () => {
@@ -47,6 +49,8 @@ const App = () => {
           <Route path="/checkout-summary" element={<CheckoutSummary />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/order-history" element={<OrderHistory />} />
+          <Route path="/order-details/:id" element={<OrderDetails />} />
+          <Route path="/review-product/:id" element={<ReviewProduct />} />
         </Routes>
         <Footer />
       </BrowserRouter>
