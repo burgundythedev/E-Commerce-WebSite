@@ -1,0 +1,35 @@
+.history {
+  padding: 5px;
+  width: 100%;
+  overflow-x: auto;
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  &__thead {
+    border-top: 2px solid var(--light-blue);
+    border-bottom: 2px solid var(--light-blue);
+  }
+
+  &__th {
+    border: 1px solid #eee;
+    vertical-align: top;
+    text-align: left;
+    padding: 8px;
+  }
+
+  &__td {
+    vertical-align: top;
+    text-align: left;
+    padding: 8px;
+  }
+
+  &__tr {
+    border-bottom: 1px solid #ccc;
+
+
+    &--bis{cursor: pointer;}
+  }
+}

@@ -11,7 +11,7 @@ const useFetchProductList = (listName) => {
     setIsLoading(true);
     try {
       const productsRef = collection(db, listName);
-      const q = query(productsRef, orderBy("category"));
+      const q = query(productsRef);
       onSnapshot(q, (querySnapshot) => {
         const allData = querySnapshot.docs.map((doc) => ({
           id: doc.id,

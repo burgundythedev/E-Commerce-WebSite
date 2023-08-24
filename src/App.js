@@ -12,9 +12,13 @@ import {
   Reset,
   Admin,
   ProductDetails,
+  Product,
+  Cart,
+  CheckoutDetails,
+  CheckoutSuccess,
+  CheckoutSummary,
+  OrderHistory,
 } from "./pages/index";
-import Product from "./pages/Product/Product";
-import Cart from "./pages/Cart/Cart";
 
 const App = () => {
   return (
@@ -28,7 +32,6 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/reset" element={<Reset />} />
-
           <Route
             path="/admin/*"
             element={
@@ -40,6 +43,10 @@ const App = () => {
           <Route path="/product-details/:id" element={<ProductDetails />} />
           <Route path="/products" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout-details" element={<CheckoutDetails />} />
+          <Route path="/checkout-summary" element={<CheckoutSummary />} />
+          <Route path="/checkout-success" element={<CheckoutSuccess />} />
+          <Route path="/order-history" element={<OrderHistory />} />
         </Routes>
         <Footer />
       </BrowserRouter>

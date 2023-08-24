@@ -132,7 +132,7 @@ const Header = () => {
               <ShowLogin>
                 <li className="header__item">
                   <NavLink
-                    to="/history"
+                    to="/order-history"
                     exact="true"
                     activeclassname="active"
                     className="header__links"

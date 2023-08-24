@@ -146,12 +146,21 @@ const Cart = () => {
               <h3>{`$${cartTotalPrice.toFixed(2)}`}</h3>
             </div>
           </div>
-          <button
-            className="cart__button cart__button--checkout"
-            onClick={handleCheckOut}
-          >
-            Checkout
-          </button>
+          {cartTotalQuantity > 0 ? (
+            <button
+              className="cart__button cart__button--checkout"
+              onClick={handleCheckOut}
+            >
+              Checkout
+            </button>
+          ) : (
+            <div className="cart__error">
+              <p>
+                Your cart is empty. Please add items to your cart before
+                proceeding to checkout.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
