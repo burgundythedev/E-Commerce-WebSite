@@ -11,7 +11,6 @@ const OrderDetails = () => {
     setOrder(details);
   }, [details]);
 
-  const orderStatus = "Order successfully received by the customer";
   return (
     <div className="order-d">
       <h2>Order details</h2>
@@ -29,7 +28,7 @@ const OrderDetails = () => {
             <b>Order Amount</b> ${order.orderAmount}
           </p>
           <p>
-            <b>Order Status</b> {orderStatus}
+            <b>Order Status</b> {order.orderStatus}
           </p>
           <table className="order-d__table">
             <thead className="order-d__thead">
@@ -39,15 +38,14 @@ const OrderDetails = () => {
                 <th className="order-d__th">Price</th>
                 <th className="order-d__th">Quantity</th>
                 <th className="order-d__th">Total</th>
-                <th className="order-d__th">Action</th>
               </tr>
             </thead>
             <tbody>
               {order.cartItems.map((cart, index) => {
-                const { id, name, price, cartQuantity } = cart;
+                const { name, price, cartQuantity } = cart;
 
                 return (
-                  <tr className="order-d__tr" key={id}>
+                  <tr className="order-d__tr" key={index}>
                     <td className="order-d__td">
                       <b>{index + 1}</b>
                     </td>
@@ -60,11 +58,6 @@ const OrderDetails = () => {
                     <td className="order-d__td">{cartQuantity}</td>
                     <td className="order-d__td">
                       {(price * cartQuantity).toFixed(2)}
-                    </td>
-                    <td className="order-d__td">
-                      <Link to="/review-product/:id">
-                        <button>Review Product</button>
-                      </Link>
                     </td>
                   </tr>
                 );

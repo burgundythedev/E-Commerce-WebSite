@@ -4,8 +4,8 @@ import "./AdminRoute.scss";
 import { Link } from "react-router-dom";
 const AdminRoute = ({ children }) => {
   const userEmail = useSelector(selectEmail);
-
-  if (userEmail === "bourgogne.olivier@gmail.com") {
+  const adminEmail = process.env.REACT_APP_ADMIN_EMAIL;
+  if (userEmail === adminEmail) {
     return children;
   }
   return (

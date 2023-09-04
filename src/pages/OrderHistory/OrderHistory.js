@@ -25,9 +25,6 @@ const OrderHistory = () => {
   return (
     <div className="history">
       <h3>Order History</h3>
-      <p>
-        Open an Order to leave a<b>Product Review</b>
-      </p>
       <>
         {isLoading && <Loader />}
         <div>
@@ -53,7 +50,7 @@ const OrderHistory = () => {
                     <tr
                       className="history__tr history__tr--bis"
                       key={id}
-                      onClick={() => handleOrderDetails(id)}
+                      onClick={() => handleOrderDetails(id, orderStatus)}
                     >
                       <td className="history__td">{index + 1}</td>
                       <td className="history__td">{orderDate}</td>

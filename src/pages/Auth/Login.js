@@ -32,7 +32,7 @@ const Login = () => {
   const loginUser = getAuth(auth);
   const userLogin = (event) => {
     event.preventDefault();
-    console.log(email, password);
+
     setIsLoading(true);
     if (email.trim() === "" || password.trim() === "") {
       toast.error("E-mail or Password cannot be empty");

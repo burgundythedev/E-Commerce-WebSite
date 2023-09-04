@@ -90,12 +90,12 @@ const AddProduct = () => {
         brand: product.brand,
         imageUrl: product.imageUrl,
         category: product.category,
-        // createdAt: Timestamp.now().toDate(),
       });
 
       setProduct({ ...initialProductState });
       toast.success("Product added with success!");
       setIsLoading(false);
+      navigate("/admin/viewproducts");
     } catch (error) {
       setIsLoading(false);
       toast.error(error.message);
@@ -112,8 +112,6 @@ const AddProduct = () => {
         brand: product.brand,
         imageUrl: product.imageUrl,
         category: product.category,
-        // createdAt: productEdit.createdAt,
-        // editedAt: Timestamp.now().toDate(),
       });
       setIsLoading(false);
       toast.success("Product updated");

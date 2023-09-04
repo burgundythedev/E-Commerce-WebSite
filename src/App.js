@@ -19,7 +19,7 @@ import {
   CheckoutSummary,
   OrderHistory,
   OrderDetails,
-  ReviewProduct,
+  NotFound,
 } from "./pages/index";
 
 const App = () => {
@@ -50,7 +50,7 @@ const App = () => {
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/order-history" element={<OrderHistory />} />
           <Route path="/order-details/:id" element={<OrderDetails />} />
-          <Route path="/review-product/:id" element={<ReviewProduct />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

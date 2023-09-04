@@ -54,13 +54,9 @@ const cartSlice = createSlice({
       }
     },
     CLEAR_CART(state) {
-      const wasCartNotEmpty = state.cartItems.length > 0;
       state.cartItems = [];
       state.cartTotalItems = 0;
       localStorage.removeItem("cartItems");
-      if (wasCartNotEmpty) {
-        toast.info("Cart has been cleared", { position: "top-left" });
-      }
     },
     SUBTOTAL_CALCULATOR(state) {
       const array = [];

@@ -1,0 +1,26 @@
+.info {
+  width: 100%;
+  max-width: 25rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  &__title {
+    font-size: 25px;
+  }
+  &__card {
+    border: 1px solid #ccc;
+    border-bottom: 3px solid lightblue;
+    padding: 5px;
+    background-color: #f5f6fa;
+  }
+
+  &__span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon{
+    width: 50px;
+    height: 50px;
+  }
+}

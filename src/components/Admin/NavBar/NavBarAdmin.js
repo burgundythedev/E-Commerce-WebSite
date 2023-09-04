@@ -25,15 +25,6 @@ const NavBarAdmin = () => {
           </li>
           <li className="navbar__item">
             <NavLink
-              to="/admin/orders"
-              className="navbar__link"
-              activeclassname="active"
-            >
-              View Orders
-            </NavLink>
-          </li>
-          <li className="navbar__item">
-            <NavLink
               to="/admin/product/ADD"
               className="navbar__link"
               activeclassname="active"

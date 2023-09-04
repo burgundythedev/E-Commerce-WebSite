@@ -8,11 +8,20 @@ import {
   FILTER_BY_ALPHABET,
   selectFilteredCategories,
 } from "../../../store/slice/filterSlice";
+import Pagination from "../../../components/Pagination/Pagination";
 const ProductList = ({ list, toggleFilterVisibility, isFilterVisible }) => {
   const [grid, setGrid] = useState(true);
   const [sort, setSort] = useState("category");
   const dispatch = useDispatch();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(3);
   const filteredProducts = useSelector(selectFilteredCategories);
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
 
   useEffect(() => {
     dispatch(FILTER_BY_ALPHABET({ list, sort }));
@@ -75,7 +84,7 @@ const ProductList = ({ list, toggleFilterVisibility, isFilterVisible }) => {
           <p>No Products found</p>
         ) : (
           <>
-            {filteredProducts.map((product) => {
+            {currentProducts.map((product) => {
               return (
                 <div key={product.id}>
                   <ProductItem {...product} grid={grid} />
@@ -85,6 +94,12 @@ const ProductList = ({ list, toggleFilterVisibility, isFilterVisible }) => {
           </>
         )}
       </div>
+      <Pagination
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        productsPerPage={productsPerPage}
+        totalProducts={filteredProducts.length}
+      />
     </div>
   );
 };

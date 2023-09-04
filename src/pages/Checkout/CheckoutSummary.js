@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { selectShippingAddress } from "../../store/slice/checkoutSlice";
 import { toast } from "react-toastify";
-import { Timestamp, addDoc, collection } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase/Config";
 
 import { selectEmail } from "../../store/slice/authSlice";
@@ -47,8 +47,6 @@ const CheckoutSummary = () => {
       await addDoc(collection(db, "orders"), orderConfig);
       toast.success("Order saved");
       dispatch(CLEAR_CART());
-
-      console.log(orderConfig);
     } catch (error) {
       toast.error(error.message);
     }
@@ -71,7 +69,7 @@ const CheckoutSummary = () => {
               <h4>Subtotal:</h4>
               <h3>{cartTotalAmount.toFixed(2)}</h3>
             </div>
-            {cartItems.map((item, index) => {
+            {cartItems.map((item) => {
               const { id, name, price, cartQuantity } = item;
               return (
                 <div key={id}>

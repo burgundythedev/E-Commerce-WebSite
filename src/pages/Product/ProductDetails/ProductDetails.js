@@ -21,7 +21,6 @@ const ProductDetails = () => {
 
   const handleAddToCart = (product) => {
     dispatch(ADD_TO_CART(product));
-
     dispatch(SUBTOTAL_ITEM_CALCULATOR());
   };
 

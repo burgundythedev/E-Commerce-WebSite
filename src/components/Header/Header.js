@@ -7,11 +7,7 @@ import cartLogo from "../../assets/img/cart.png";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import auth from "../../firebase/Config";
-import {
-  CONNECTED_USER,
-  DISCONNECT_USER,
-  selectUserName,
-} from "../../store/slice/authSlice";
+import { CONNECTED_USER, DISCONNECT_USER } from "../../store/slice/authSlice";
 import ShowLogin, { HideLogin } from "../DisplayLinks/ShowLogin";
 import { AdminOnlyLink } from "../Admin/AdminRoute/AdminRoute";
 import {
@@ -24,7 +20,7 @@ const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartQuantity = useSelector(selectCartTotalItems);
-  const userName = useSelector(selectUserName);
+
   useEffect(() => {
     dispatch(SUBTOTAL_ITEM_CALCULATOR());
   }, [dispatch, cartQuantity]);
