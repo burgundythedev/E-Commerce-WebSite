@@ -24,7 +24,7 @@ const AdminRoute = ({ children }) => {
 export const AdminOnlyLink = ({ children }) => {
   const userEmail = useSelector(selectEmail);
 
-  if (userEmail === "bourgogne.olivier@gmail.com") {
+  if (userEmail === process.env.REACT_APP_ADMIN_EMAIL) {
     return children;
   }
   return null;
