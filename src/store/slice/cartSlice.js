@@ -31,15 +31,14 @@ const cartSlice = createSlice({
       const productIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
       );
-      if (productIndex >= 0) {
-        if (state.cartItems[productIndex].cartQuantity > 1) {
-          state.cartItems[productIndex].cartQuantity -= 1;
-        } else {
-          state.cartItems.splice(productIndex, 1);
-          toast.warning("Product removed from Cart", { position: "top-left" });
-        }
-        localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      if (productIndex < 0) return;
+      if (state.cartItems[productIndex].cartQuantity > 1) {
+        state.cartItems[productIndex].cartQuantity -= 1;
+      } else {
+        state.cartItems.splice(productIndex, 1);
+        toast.warning("Product removed from Cart", { position: "top-left" });
       }
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     REMOVE_FROM_CART(state, action) {
       const productId = action.payload.id;
@@ -47,11 +46,11 @@ const cartSlice = createSlice({
         (item) => item.id === productId
       );
 
-      if (productIndex >= 0) {
-        state.cartItems.splice(productIndex, 1);
-        toast.error("Product removed from Cart", { position: "top-left" });
-        localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      }
+      if (productIndex < 0) return;
+
+      state.cartItems.splice(productIndex, 1);
+      toast.error("Product removed from Cart", { position: "top-left" });
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     CLEAR_CART(state) {
       state.cartItems = [];
@@ -83,7 +82,6 @@ const cartSlice = createSlice({
       state.cartTotalItems = totalQuantity;
     },
     SAVE_URL(state, action) {
-      console.log(action.payload);
       state.prevUrl = action.payload;
     },
   },

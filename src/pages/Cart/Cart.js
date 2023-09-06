@@ -49,7 +49,6 @@ const Cart = () => {
   }, [dispatch, cartItems]);
 
   const url = window.location.href;
-  console.log(url);
   const handleCheckOut = () => {
     if (isLoggedIn) {
       navigate("/checkout-details");
