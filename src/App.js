@@ -30,44 +30,26 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/E-Commerce-WebSite" element={<Home />} />
-          <Route path="/E-Commerce-WebSite/contact" element={<Contact />} />
-          <Route path="/E-Commerce-WebSite/login" element={<Login />} />
-          <Route path="/E-Commerce-WebSite/register" element={<Register />} />
-          <Route path="/E-Commerce-WebSite/reset" element={<Reset />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/reset" element={<Reset />} />
           <Route
-            path="/E-Commerce-WebSite/admin/*"
+            path="/admin/*"
             element={
               <AdminRoute>
                 <Admin />
               </AdminRoute>
             }
           />
-          <Route
-            path="/E-Commerce-WebSite/product-details/:id"
-            element={<ProductDetails />}
-          />
-          <Route path="/E-Commerce-WebSite/products" element={<Product />} />
-          <Route path="/E-Commerce-WebSite/cart" element={<Cart />} />
-          <Route
-            path="/E-Commerce-WebSite/checkout-details"
-            element={<CheckoutDetails />}
-          />
-          <Route
-            path="/E-Commerce-WebSite/checkout-summary"
-            element={<CheckoutSummary />}
-          />
-          <Route
-            path="/E-Commerce-WebSite/checkout-success"
-            element={<CheckoutSuccess />}
-          />
-          <Route
-            path="/E-Commerce-WebSite/order-history"
-            element={<OrderHistory />}
-          />
-          <Route
-            path="/E-Commerce-WebSite/order-details/:id"
-            element={<OrderDetails />}
-          />
+          <Route path="/product-details/:id" element={<ProductDetails />} />
+          <Route path="/products" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout-details" element={<CheckoutDetails />} />
+          <Route path="/checkout-summary" element={<CheckoutSummary />} />
+          <Route path="/checkout-success" element={<CheckoutSuccess />} />
+          <Route path="/order-history" element={<OrderHistory />} />
+          <Route path="/order-details/:id" element={<OrderDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
