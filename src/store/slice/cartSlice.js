@@ -83,7 +83,6 @@ const cartSlice = createSlice({
       state.cartTotalItems = totalQuantity;
     },
     SAVE_URL(state, action) {
-      console.log(action.payload);
       state.prevUrl = action.payload;
     },
   },

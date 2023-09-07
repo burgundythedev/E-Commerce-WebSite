@@ -36,11 +36,11 @@ const Contact = () => {
     });
   };
   return (
-    <div class="contact-form">
-      <h2 class="contact-form__title">Contact Us</h2>
-      <form class="contact-form__form" onClick={handleSubmit}>
-        <div class="contact-form__field">
-          <label for="name" class="contact-form__label">
+    <div className="contact-form">
+      <h2 className="contact-form__title">Contact Us</h2>
+      <form className="contact-form__form" onClick={handleSubmit}>
+        <div className="contact-form__field">
+          <label htmlFor="name" className="contact-form__label">
             Name
           </label>
           <input
@@ -48,14 +48,14 @@ const Contact = () => {
             type="text"
             id="name"
             name="name"
-            class="contact-form__input"
+            className="contact-form__input"
             value={formData.name}
             onChange={handleChange}
             required
           />
         </div>
-        <div class="contact-form__field">
-          <label for="email" class="contact-form__label">
+        <div className="contact-form__field">
+          <label htmlFor="email" className="contact-form__label">
             Email
           </label>
           <input
@@ -63,14 +63,14 @@ const Contact = () => {
             type="email"
             id="email"
             name="email"
-            class="contact-form__input"
+            className="contact-form__input"
             required
             value={formData.email}
             onChange={handleChange}
           />
         </div>
-        <div class="contact-form__field">
-          <label for="subject" class="contact-form__label">
+        <div className="contact-form__field">
+          <label htmlFor="subject" className="contact-form__label">
             Subject
           </label>
           <input
@@ -78,27 +78,27 @@ const Contact = () => {
             type="text"
             id="subject"
             name="subject"
-            class="contact-form__input"
+            className="contact-form__input"
             required
             value={formData.subject}
             onChange={handleChange}
           />
         </div>
-        <div class="contact-form__field">
-          <label for="message" class="contact-form__label">
+        <div className="contact-form__field">
+          <label htmlFor="message" className="contact-form__label">
             Message
           </label>
           <textarea
             id="message"
             name="message"
-            class="contact-form__textarea"
+            className="contact-form__textarea"
             required
             value={formData.message}
             onChange={handleChange}
           ></textarea>
         </div>
-        <div class="contact-form__field">
-          <button type="submit" class="contact-form__submit">
+        <div className="contact-form__field">
+          <button type="submit" className="contact-form__submit">
             Submit
           </button>
         </div>
