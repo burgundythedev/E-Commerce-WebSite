@@ -11,14 +11,11 @@ import Loader from "../../Loader/Loader";
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
-  // const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmP, setConfirmP] = useState("");
 
   const navigate = useNavigate();
-  // const onUserNameChange = (event) => {
-  //   setUserName(event.target.value);
-  // };
+
   const onChangeEmail = (event) => {
     setEmail(event.target.value);
   };
@@ -60,16 +57,6 @@ const Register = () => {
             className="register__form"
             onSubmit={registerSubmit}
           >
-            {/* <div className="register__input">
-              <input
-                onChange={onUserNameChange}
-                value={userName}
-                className="register__placeholder"
-                type="text"
-                placeholder="Username"
-                required
-              />
-            </div> */}
             <div className="register__input">
               <input
                 value={email}

@@ -73,7 +73,7 @@ const ViewProduct = () => {
                       <td className="view__td">{`${price}€`}</td>
                       <td className="view__td view__td--icon">
                         <div className="view__container-icon">
-                          <Link to={`/admin/product/${id}`}>
+                          <Link to={`e-commerceweb/admin/product/${id}`}>
                             <img
                               className="view__icon"
                               src={edit}

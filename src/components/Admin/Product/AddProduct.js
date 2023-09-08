@@ -95,7 +95,7 @@ const AddProduct = () => {
       setProduct({ ...initialProductState });
       toast.success("Product added with success!");
       setIsLoading(false);
-      navigate("/admin/viewproducts");
+      navigate("e-commerceweb/admin/viewproducts");
     } catch (error) {
       setIsLoading(false);
       toast.error(error.message);
@@ -115,7 +115,7 @@ const AddProduct = () => {
       });
       setIsLoading(false);
       toast.success("Product updated");
-      navigate("/admin/viewproducts");
+      navigate("e-commerceweb/admin/viewproducts");
     } catch (error) {
       setIsLoading(false);
       toast.error(error.message);

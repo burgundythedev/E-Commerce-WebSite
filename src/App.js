@@ -21,12 +21,18 @@ import {
   OrderDetails,
   NotFound,
 } from "./pages/index";
+import { Helmet } from "react-helmet";
 
 const App = () => {
+  <Helmet>
+    <meta charSet="utf-8" />
+    <title>E-COMMERCE</title>
+    <link rel="canonical" href="https://burgundythedev.github.io/" />
+  </Helmet>;
   return (
     <React.Fragment>
       <ToastContainer />
-      <BrowserRouter>
+      <BrowserRouter basename="/e-commerceweb">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
