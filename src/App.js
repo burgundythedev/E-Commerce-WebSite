@@ -21,19 +21,28 @@ import {
   OrderDetails,
   NotFound,
 } from "./pages/index";
+import { Helmet } from "react-helmet";
 
 const App = () => {
+  <Helmet>
+    <meta charSet="utf-8" />
+    <title>E-COMMERCE</title>
+    <link
+      rel="canonical"
+      href="https://burgundythedev.github.io/e-commerceweb/"
+    />
+  </Helmet>;
   return (
     <React.Fragment>
       <ToastContainer />
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/reset" element={<Reset />} />
+          <Route path="e-commerceweb/" element={<Home />} />
+          <Route path="e-commerceweb/contact" element={<Contact />} />
+          <Route path="e-commerceweb/login" element={<Login />} />
+          <Route path="e-commerceweb/register" element={<Register />} />
+          <Route path="e-commerceweb/reset" element={<Reset />} />
           <Route
             path="/admin/*"
             element={
@@ -42,14 +51,32 @@ const App = () => {
               </AdminRoute>
             }
           />
-          <Route path="/product-details/:id" element={<ProductDetails />} />
-          <Route path="/products" element={<Product />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout-details" element={<CheckoutDetails />} />
-          <Route path="/checkout-summary" element={<CheckoutSummary />} />
-          <Route path="/checkout-success" element={<CheckoutSuccess />} />
-          <Route path="/order-history" element={<OrderHistory />} />
-          <Route path="/order-details/:id" element={<OrderDetails />} />
+          <Route
+            path="e-commerceweb/product-details/:id"
+            element={<ProductDetails />}
+          />
+          <Route path="e-commerceweb/products" element={<Product />} />
+          <Route path="e-commerceweb/cart" element={<Cart />} />
+          <Route
+            path="e-commerceweb/checkout-details"
+            element={<CheckoutDetails />}
+          />
+          <Route
+            path="e-commerceweb/checkout-summary"
+            element={<CheckoutSummary />}
+          />
+          <Route
+            path="e-commerceweb/checkout-success"
+            element={<CheckoutSuccess />}
+          />
+          <Route
+            path="e-commerceweb/order-history"
+            element={<OrderHistory />}
+          />
+          <Route
+            path="e-commerceweb/order-details/:id"
+            element={<OrderDetails />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

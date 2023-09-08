@@ -59,7 +59,7 @@ const CheckoutSummary = () => {
           <div>
             <p>No items in your cart</p>
             <button>
-              <Link to="/#product">&larr; Back to Shop</Link>
+              <Link to="e-commerceweb/#product">&larr; Back to Shop</Link>
             </button>
           </div>
         ) : (
@@ -84,7 +84,7 @@ const CheckoutSummary = () => {
         )}
       </div>
       <div className="summary__button">
-        <Link to="/checkout-success">
+        <Link to="e-commerceweb/checkout-success">
           <button onClick={saveOrder}>Finalize your order</button>
         </Link>
       </div>

@@ -30,7 +30,7 @@ const OrderStatus = ({ order, id }) => {
 
       dispatch(UPDATE_ORDER_STATUS({ id, status }));
 
-      navigate("/admin/home");
+      navigate("e-commerceweb/admin/home");
     } catch (error) {
       toast.error(error.message);
       setLoading(false);

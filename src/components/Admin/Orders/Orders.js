@@ -18,7 +18,7 @@ const Orders = () => {
     dispatch(STORE_ORDERS(displayList));
   }, [dispatch, displayList]);
   const handleOrderDetails = (id) => {
-    navigate(`/admin/orders-details/${id}`);
+    navigate(`e-commerceweb/admin/orders-details/${id}`);
   };
 
   return (

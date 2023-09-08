@@ -9,7 +9,7 @@ const NotFound = () => {
         <h2 className="error__content__title">404</h2>
         <p className="error__content__description">Opppss, Page Not Found</p>
         <button className="error__content__button">
-          <Link to="/"> &larr; Back To Home</Link>
+          <Link to="/e-commerceweb"> &larr; Back To Home</Link>
         </button>
       </div>
     </div>

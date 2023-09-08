@@ -75,7 +75,7 @@ const Header = () => {
               <AdminOnlyLink>
                 <li className="header__item">
                   <Link
-                    to="/admin/home"
+                    to="e-commerceweb/admin/home"
                     exact="true"
                     activeclassname="active"
                     className="header__links"
@@ -86,7 +86,7 @@ const Header = () => {
               </AdminOnlyLink>
               <li className="header__item">
                 <NavLink
-                  to="/"
+                  to="/e-commerceweb"
                   exact="true"
                   activeclassname="active"
                   className="header__links"
@@ -96,7 +96,7 @@ const Header = () => {
               </li>
               <li className="header__item">
                 <NavLink
-                  to="/contact"
+                  to="e-commerceweb/contact"
                   exact="true"
                   activeclassname="active"
                   className="header__links"
@@ -109,7 +109,7 @@ const Header = () => {
               <HideLogin>
                 <li className="header__item">
                   <NavLink
-                    to="/login"
+                    to="e-commerceweb/login"
                     exact="true"
                     activeclassname="active"
                     className="header__links"
@@ -119,7 +119,7 @@ const Header = () => {
                 </li>
                 <li className="header__item">
                   <NavLink
-                    to="/register"
+                    to="e-commerceweb/register"
                     exact="true"
                     activeclassname="active"
                     className="header__links"
@@ -132,7 +132,7 @@ const Header = () => {
               <ShowLogin>
                 <li className="header__item">
                   <NavLink
-                    to="/order-history"
+                    to="e-commerceweb/order-history"
                     exact="true"
                     activeclassname="active"
                     className="header__links"
@@ -142,7 +142,7 @@ const Header = () => {
                 </li>
                 <li className="header__item">
                   <NavLink
-                    to="/"
+                    to="/e-commerceweb"
                     exact="true"
                     activeclassname="--active"
                     className="header__links"
@@ -156,7 +156,7 @@ const Header = () => {
 
             <div className="header__cart-container">
               <span className="header__cart">
-                <NavLink to="/cart" className="header__link-cart">
+                <NavLink to="e-commerceweb/cart" className="header__link-cart">
                   <img
                     src={cartLogo}
                     alt="cartlogo"

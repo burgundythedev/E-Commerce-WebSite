@@ -59,10 +59,10 @@ const Reset = () => {
             </button>
           </div>
           <div className="reset__register">
-            <Link className="reset__text-register" to="/login">
+            <Link className="reset__text-register" to="e-commerceweb/login">
               Login
             </Link>
-            <Link className="reset__text-register" to="/register">
+            <Link className="reset__text-register" to="e-commerceweb/register">
               Register
             </Link>
           </div>

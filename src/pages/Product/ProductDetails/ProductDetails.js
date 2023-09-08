@@ -29,7 +29,7 @@ const ProductDetails = () => {
       <div className="details__container">
         <h2>Details</h2>
         <div>
-          <Link to="/products">Back to Products</Link>
+          <Link to="e-commerceweb/products">Back to Products</Link>
         </div>
         {product === null ? (
           <Loader />

@@ -4,7 +4,7 @@ const CheckoutSuccess = () => {
   return (
     <div className="success">
       <h2>Thank you for your purchase</h2>
-      <Link to="/order-history">
+      <Link to="e-commerceweb/order-history">
         <button>View Order Status</button>
       </Link>
     </div>

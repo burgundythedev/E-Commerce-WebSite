@@ -51,10 +51,10 @@ const Cart = () => {
   const url = window.location.href;
   const handleCheckOut = () => {
     if (isLoggedIn) {
-      navigate("/checkout-details");
+      navigate("e-commerceweb/checkout-details");
     } else {
       dispatch(SAVE_URL(url));
-      navigate("/login");
+      navigate("e-commerceweb/login");
     }
   };
 
@@ -65,7 +65,7 @@ const Cart = () => {
         <div className="cart__empty">
           <p>Your Cart is currently empty</p>
           <br />
-          <Link to="/#products">&larr; Continue Shopping</Link>
+          <Link to="e-commerceweb/#products">&larr; Continue Shopping</Link>
         </div>
       ) : (
         <table className="cart__table">
@@ -134,7 +134,7 @@ const Cart = () => {
         </button>
         <div className="cart__checkout">
           <div>
-            <Link to="/products">&larr; Continue Shopping</Link>
+            <Link to="Ee-commerceweb/products">&larr; Continue Shopping</Link>
           </div>
           <div className="cart__card">
             <p>

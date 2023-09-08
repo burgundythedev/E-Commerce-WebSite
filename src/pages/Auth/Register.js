@@ -11,14 +11,11 @@ import Loader from "../../Loader/Loader";
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
-  // const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmP, setConfirmP] = useState("");
 
   const navigate = useNavigate();
-  // const onUserNameChange = (event) => {
-  //   setUserName(event.target.value);
-  // };
+
   const onChangeEmail = (event) => {
     setEmail(event.target.value);
   };
@@ -41,7 +38,7 @@ const Register = () => {
         console.log(user);
         setIsLoading(false);
         toast.success("Congratulations, your account have been created!");
-        navigate("/login");
+        navigate("e-commerceweb/login");
       })
       .catch((error) => {
         setIsLoading(false);
@@ -60,16 +57,6 @@ const Register = () => {
             className="register__form"
             onSubmit={registerSubmit}
           >
-            {/* <div className="register__input">
-              <input
-                onChange={onUserNameChange}
-                value={userName}
-                className="register__placeholder"
-                type="text"
-                placeholder="Username"
-                required
-              />
-            </div> */}
             <div className="register__input">
               <input
                 value={email}
@@ -107,7 +94,10 @@ const Register = () => {
             </div>
             <div className="register__register">
               <p className="register__text">Already an account</p>
-              <Link className="register__text-register" to="/login">
+              <Link
+                className="register__text-register"
+                to="e-commerceweb/login"
+              >
                 Login
               </Link>
             </div>

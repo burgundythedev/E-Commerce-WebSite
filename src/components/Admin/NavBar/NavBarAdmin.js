@@ -16,7 +16,7 @@ const NavBarAdmin = () => {
         <ul className="navbar__list">
           <li className="navbar__item">
             <NavLink
-              to="/admin/home"
+              to="e-commerceweb/admin/home"
               className="navbar__link"
               activeclassname="active"
             >
@@ -25,7 +25,7 @@ const NavBarAdmin = () => {
           </li>
           <li className="navbar__item">
             <NavLink
-              to="/admin/product/ADD"
+              to="e-commerceweb/admin/product/ADD"
               className="navbar__link"
               activeclassname="active"
             >
@@ -34,7 +34,7 @@ const NavBarAdmin = () => {
           </li>
           <li className="navbar__item">
             <NavLink
-              to="/admin/viewproducts"
+              to="e-commerceweb/admin/viewproducts"
               className="navbar__link"
               activeclassname="active"
             >

@@ -14,7 +14,7 @@ const AdminRoute = ({ children }) => {
       <p className="admin-route__paragraph">
         Page can only be accessible by admin user
       </p>
-      <Link to="/">
+      <Link to="/e-commerceweb">
         <button className="admin-route__button">&larr; Back to Home</button>
       </Link>
     </section>
