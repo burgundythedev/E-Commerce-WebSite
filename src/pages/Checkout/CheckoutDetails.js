@@ -43,7 +43,7 @@ const CheckoutDetails = () => {
     if (isShippingValid && isBillingValid) {
       dispatch(SAVE_SHIPPING_ADDRESS(shipAddress));
       dispatch(SAVE_BILLING_ADDRESS(billAddress));
-      navigate("e-commerceweb/checkout-summary");
+      navigate("/checkout-summary");
     } else {
       toast.error("Form is not completed");
     }
