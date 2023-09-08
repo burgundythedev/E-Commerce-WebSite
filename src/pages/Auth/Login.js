@@ -24,7 +24,7 @@ const Login = () => {
 
   const navigateUser = () => {
     if (previousUrl.includes("cart")) {
-      return navigate("e-commerceweb/cart");
+      return navigate("/cart");
     } else {
       navigate("/");
     }
@@ -93,15 +93,12 @@ const Login = () => {
               </button>
             </div>
             <div className="login__connect-box">
-              <Link className="login__reset" to="e-commerceweb/reset">
+              <Link className="login__reset" to="/reset">
                 Reset your Password
               </Link>
               <div className="login__register">
                 <p className="login__text">Doesn't Have an account</p>
-                <Link
-                  className="login__text-register"
-                  to="e-commerceweb/register"
-                >
+                <Link className="login__text-register" to="/register">
                   Register
                 </Link>
               </div>

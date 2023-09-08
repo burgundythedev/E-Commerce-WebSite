@@ -45,7 +45,7 @@ const ProductItem = ({
   return (
     <div className="item">
       <div className={itemClass}>
-        <Link to={`e-commerceweb/product-details/${id}`}>
+        <Link to={`/product-details/${id}`}>
           <div className="item__container-img">
             <img className="item__img" src={imageUrl} alt={name} />
           </div>

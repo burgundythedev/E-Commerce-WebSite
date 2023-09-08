@@ -16,9 +16,7 @@ const OrdersDetails = () => {
     <div className="orders-details">
       <h2>Order details</h2>
       <div>
-        <Link to="e-commerceweb/admin/home">
-          &larr; Return to statistical summary
-        </Link>
+        <Link to="/admin/home">&larr; Return to statistical summary</Link>
       </div>
       {order === null ? (
         <p>We're not able to display your order details, Try again!</p>

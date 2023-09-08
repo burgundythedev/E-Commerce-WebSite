@@ -38,7 +38,7 @@ const Register = () => {
         console.log(user);
         setIsLoading(false);
         toast.success("Congratulations, your account have been created!");
-        navigate("e-commerceweb/login");
+        navigate("/login");
       })
       .catch((error) => {
         setIsLoading(false);
@@ -94,10 +94,7 @@ const Register = () => {
             </div>
             <div className="register__register">
               <p className="register__text">Already an account</p>
-              <Link
-                className="register__text-register"
-                to="e-commerceweb/login"
-              >
+              <Link className="register__text-register" to="/login">
                 Login
               </Link>
             </div>

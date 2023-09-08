@@ -16,7 +16,7 @@ const OrderHistory = () => {
     dispatch(STORE_ORDERS(displayList));
   }, [dispatch, displayList]);
   const handleOrderDetails = (id) => {
-    navigate(`e-commerceweb/order-details/${id}`);
+    navigate(`/order-details/${id}`);
   };
 
   const filteredOrders = orderHistory.filter(

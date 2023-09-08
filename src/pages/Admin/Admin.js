@@ -15,14 +15,11 @@ const Admin = () => {
       </nav>
       <div className="admin__content">
         <Routes>
-          <Route path="e-commerceweb/home" element={<HomeAdmin />} />
-          <Route path="e-commerceweb/orders" element={<Orders />} />
-          <Route path="e-commerceweb/product/:id" element={<AddProduct />} />
-          <Route path="e-commerceweb/viewproducts" element={<ViewProduct />} />
-          <Route
-            path="e-commerceweb/orders-details/:id"
-            element={<OrdersDetails />}
-          />
+          <Route path="/home" element={<HomeAdmin />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/product/:id" element={<AddProduct />} />
+          <Route path="/viewproducts" element={<ViewProduct />} />
+          <Route path="/orders-details/:id" element={<OrdersDetails />} />
         </Routes>
       </div>
     </div>
