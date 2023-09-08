@@ -32,7 +32,7 @@ const App = () => {
   return (
     <React.Fragment>
       <ToastContainer />
-      <BrowserRouter>
+      <BrowserRouter basename="/e-commerceweb">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
