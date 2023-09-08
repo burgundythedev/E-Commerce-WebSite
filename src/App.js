@@ -27,7 +27,10 @@ const App = () => {
   <Helmet>
     <meta charSet="utf-8" />
     <title>E-COMMERCE</title>
-    <link rel="canonical" href="https://burgundythedev.github.io/" />
+    <link
+      rel="canonical"
+      href="https://burgundythedev.github.io/e-commerceweb"
+    />
   </Helmet>;
   return (
     <React.Fragment>
