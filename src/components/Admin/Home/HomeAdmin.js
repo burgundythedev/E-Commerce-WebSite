@@ -38,18 +38,25 @@ const HomeAdmin = () => {
 
   return (
     <div className="home-admin">
-      <h2>Home-Admin</h2>
+      <h2 className="home-admin__title home-admin__title--title">Business</h2>
       <div className="home-admin__container">
-        <InfoBox
-          title={"Earnings"}
-          count={`$${totalOrderAmount}`}
-          icon={earnIcon}
-        />
-        <InfoBox title={"Products"} count={productCount} icon={productIcon} />
-        <InfoBox title={"Orders"} count={orderHistory} icon={orderIcon} />
+        <div className="home-admin__info-box">
+          <InfoBox
+            title={"Earnings"}
+            count={`$${totalOrderAmount}`}
+            icon={earnIcon}
+          />
+          <InfoBox title={"Products"} count={productCount} icon={productIcon} />
+          <InfoBox title={"Orders"} count={orderHistory} icon={orderIcon} />
+        </div>
+        <div className="home-admin__chart-container">
+          <h3 className="home-admin__title home-admin__title--chart">
+            Order Status Graphic
+          </h3>
+          <Chart orderHistory={orderHistory} />
+        </div>
       </div>
-      <div>
-        <Chart orderHistory={orderHistory} />
+      <div className="home-admin__order-container">
         <Orders />
       </div>
     </div>

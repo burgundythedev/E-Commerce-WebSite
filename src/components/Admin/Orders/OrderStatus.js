@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { UPDATE_ORDER_STATUS } from "../../../store/slice/orderSlice";
+import "./OrderStatus.scss";
 
 const OrderStatus = ({ order, id }) => {
   const [status, setStatus] = useState("");
@@ -40,9 +41,9 @@ const OrderStatus = ({ order, id }) => {
   return (
     <div className="status">
       {loading && <Loader />}
-      <h4>Update Status</h4>
-      <form onSubmit={(e) => updateStatus(e, id)}>
+      <form className="status__form" onSubmit={(e) => updateStatus(e, id)}>
         <select
+          className="status__select"
           value={status}
           onChange={(e) => {
             setStatus(e.target.value);
@@ -56,7 +57,9 @@ const OrderStatus = ({ order, id }) => {
           <option value="Processing">Processing</option>
           <option value="Shipped">Shipped</option>
         </select>
-        <button type="submit">Update Status</button>
+        <button className="status__button" type="submit">
+          Update Status
+        </button>
       </form>
     </div>
   );

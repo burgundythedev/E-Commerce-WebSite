@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ViewProduct.scss";
 import { Link } from "react-router-dom";
-import edit from "../../../assets/img/edit-icon.png";
+import edit from "../../../assets/img/edit.png";
 import trash from "../../../assets/img/trash.png";
 import { useDispatch, useSelector } from "react-redux";
 import { STORE_PRODUCTS, selectProduct } from "../../../store/slice/storeSlice";
@@ -73,7 +73,7 @@ const ViewProduct = () => {
                       <td className="view__td">{`${price}€`}</td>
                       <td className="view__td view__td--icon">
                         <div className="view__container-icon">
-                          <Link to={`e-commerceweb/admin/product/${id}`}>
+                          <Link to={`/admin/product/${id}`}>
                             <img
                               className="view__icon"
                               src={edit}

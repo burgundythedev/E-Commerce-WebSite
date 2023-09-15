@@ -24,12 +24,37 @@ const OrderHistory = () => {
   );
   return (
     <div className="history">
-      <h3>Order History</h3>
+      {isLoading && <Loader />}
+      <div className="history__background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h3 className="history__title">Your Order History</h3>
       <>
-        {isLoading && <Loader />}
         <div>
+          <h3 className="history__title history__title--details">
+            Click on your order to see Details
+          </h3>
           {filteredOrders.lenght === 0 ? (
-            <p>No order found</p>
+            <p className="history__title">No order found</p>
           ) : (
             <table className="history__table">
               <thead className="history__thead">

@@ -1,72 +1,79 @@
-.table {
-    padding: 5px;
+.orders-details {
+  margin-left: 50px;
+  &__table {
+    max-width: 1000px;
+    border-collapse: collapse;
     width: 100%;
-    overflow-x: auto;
-  
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-size: 1.4rem;
-  
-      thead {
-        border-top: 2px solid var(--light-blue);
-        border-bottom: 2px solid var(--light-blue);
-      }
-  
-      th {
-        border: 1px solid #eee;
-      }
-  
-      th,
-      td {
-        vertical-align: top;
-        text-align: left;
-        padding: 8px;
-        &.icons {
-          > * {
-            margin-right: 5px;
-            cursor: pointer;
-          }
-        }
-      }
-  
-      tr {
-        border-bottom: 1px solid #ccc;
-      }
-  
-      tr:nth-child(even) {
-        background-color: #eee;
-      }
-    }
-    .summary {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-  
-      .card {
-        padding: 1rem;
-        .text {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          h3 {
-            color: var(--color-danger);
-          }
-        }
-        button {
-          margin-top: 5px;
-        }
-      }
+    font-size: 1rem;
+    margin-top: 80px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  &__back-link {
+    margin-top: 80px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+  }
+  &__link {
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+    color: rgb(226, 135, 67, 1);
+    &:visited {
+      color: rgb(226, 135, 67, 1);
     }
   }
-  .count {
+
+  &__container-details {
     display: flex;
-    align-items: center;
-    button {
-      border: 1px solid var(--darkblue);
-    }
-    & > * {
-      margin-right: 1rem;
+    flex-direction: row;
+    margin-top: 20px;
+    &--status {
+      flex-direction: column;
+    
     }
   }
+  &__container-status {
+    display: flex;
+    flex-direction: row;
+  
+  }
+  &__title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+  }
+  &__text {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    margin: 0px 0px 0px 10px;
+    color: rgb(159, 207, 227, 1);
+    &--status{
+      margin-bottom: 10px;
+      font-style: italic
+    }
+  }
+  &__bold {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+  }
+  &__thead {
+    border: 1px solid black;
+    background-color: rgb(159, 207, 227, 0.2);
+  }
+
+  &__th {
+    vertical-align: top;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+  }
+  &__td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+  }
+
+  &__tr {
+    border: 1px solid black;
+  }
+}

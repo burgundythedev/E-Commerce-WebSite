@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import storage, { db } from "../../../firebase/Config";
-
+import "./AddProduct.scss";
 import {
   getDownloadURL,
   getStorage,
@@ -15,10 +15,10 @@ import { selectProduct } from "../../../store/slice/storeSlice";
 import Loader from "../../../Loader/Loader";
 
 const categories = [
-  { id: 1, name: "Sneakers" },
-  { id: 2, name: "City Lifestyle" },
-  { id: 3, name: "Art" },
-  { id: 4, name: "Orignal collab" },
+  { id: 1, name: "Explore" },
+  { id: 2, name: "Dream Visit" },
+  { id: 3, name: "Design Visit" },
+  { id: 4, name: "Reservation" },
 ];
 
 const initialProductState = {
@@ -74,7 +74,6 @@ const AddProduct = () => {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           setProduct({ ...product, imageUrl: downloadURL });
-          toast.success("Image uploaded with success");
         });
       }
     );
@@ -93,9 +92,8 @@ const AddProduct = () => {
       });
 
       setProduct({ ...initialProductState });
-      toast.success("Product added with success!");
       setIsLoading(false);
-      navigate("e-commerceweb/admin/viewproducts");
+      navigate("/admin/viewproducts");
     } catch (error) {
       setIsLoading(false);
       toast.error(error.message);
@@ -114,8 +112,7 @@ const AddProduct = () => {
         category: product.category,
       });
       setIsLoading(false);
-      toast.success("Product updated");
-      navigate("e-commerceweb/admin/viewproducts");
+      navigate("/admin/viewproducts");
     } catch (error) {
       setIsLoading(false);
       toast.error(error.message);
@@ -134,7 +131,7 @@ const AddProduct = () => {
             className="addproduct__form"
           >
             <div className="addproduct__container">
-              <label className="addproduct__label">Produt Name</label>
+              <label className="addproduct__label">Produt Name:</label>
               <input
                 type="text"
                 placeholder="Product Name"
@@ -146,10 +143,7 @@ const AddProduct = () => {
               />
             </div>
             <div className="addproduct__container">
-              <label className="addproduct_label">Product Image</label>
-              {uploadProgress > 0 && (
-                <p className="progress">{uploadProgress}%</p>
-              )}
+              <label className="addproduct__label">Product Image:</label>
               <input
                 type="file"
                 accept="image/*"
@@ -168,9 +162,14 @@ const AddProduct = () => {
                   className="addproduct__input"
                 />
               )}
+              {uploadProgress > 0 && (
+                <p className="addproduct__progress">
+                  Upload: {uploadProgress}%
+                </p>
+              )}
             </div>
             <div className="addproduct__container">
-              <label className="addproduct__label">Produt Price</label>
+              <label className="addproduct__label">Produt Price:</label>
               <input
                 type="text"
                 placeholder="Product Price"
@@ -182,8 +181,11 @@ const AddProduct = () => {
               />
             </div>
             <div className="addproduct__container">
-              <label htmlFor="category-select">Choose a category</label>
+              <label className="addproduct__label" htmlFor="category-select">
+                Choose a category:
+              </label>
               <select
+                className="addproduct__select"
                 value={currentProduct.category}
                 onChange={handleAddProductInput}
                 name="category"
@@ -192,17 +194,15 @@ const AddProduct = () => {
                 <option value="" disabled>
                   - Please choose an option -
                 </option>
-                {categories.map((cat) => {
-                  return (
-                    <option key={cat.id} value={cat.name}>
-                      {cat.name}
-                    </option>
-                  );
-                })}
+                {categories.map((cat) => (
+                  <option key={cat.id} value={cat.name}>
+                    {cat.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="addproduct__container">
-              <label className="addproduct__label">Produt Brand</label>
+              <label className="addproduct__label">Produt Brand:</label>
               <input
                 type="text"
                 placeholder="Product Brand"
@@ -214,7 +214,7 @@ const AddProduct = () => {
               />
             </div>
             <div className="addproduct__container">
-              <label className="addproduct__label">Description</label>
+              <label className="addproduct__label">Description:</label>
               <textarea
                 cols="25"
                 rows="10"

@@ -1,0 +1,91 @@
+.addproduct {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(226, 135, 67, 0.1);
+
+  &__title {
+    font-size: 30px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: center;
+  }
+  &__label {
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  &__input {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid rgb(226, 135, 67, 0.5);
+    border-radius: 10px;
+    font-size: 16px;
+    width: 400px;
+    &:focus {
+      outline: none;
+      border-color: rgb(159, 207, 227, 1);
+    }
+  }
+  &__textarea {
+    padding: 10px;
+    border: 1px solid rgb(226, 135, 67, 0.5);
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    &:focus {
+      outline: none;
+      border-color: rgb(159, 207, 227, 1);
+    }
+  }
+
+  &__button {
+    background-color: rgb(159, 207, 227, 0.5);
+    border-radius: 50px;
+    border-width: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 15px;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    
+
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+        rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+    }
+  }
+  &__select {
+    margin-top: 15px;
+    width: 420px;
+    padding: 10px;
+    border: 1px solid rgba(226, 135, 67, 0.5);
+    border-radius: 10px;
+    font-size: 16px;
+    border-color: rgba(159, 207, 227, 1);
+
+    &:focus {
+      border-color: rgba(159, 207, 227, 1);
+    }
+  }
+  &__progress {
+    font-size: 15px;
+    margin-left: 5px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+}

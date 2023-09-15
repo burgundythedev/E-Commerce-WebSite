@@ -1,20 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Imbue:opsz@10..100&display=swap");
+
 .slider {
   width: 100%;
   height: 90vh;
   position: relative;
   overflow: hidden;
-  background-color: black;
+  background-color: #ffffff;
+}
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
 }
 
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background span {
+  width: 4vmin;
+  height: 4vmin;
+  border-radius: 4vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 25;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+  color: #9fcfe3;
+  top: 65%;
+  left: 65%;
+  animation-duration: 139s;
+  animation-delay: -204s;
+  transform-origin: 21vw -12vh;
+  box-shadow: 8vmin 0 1.3725355306675333vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #9fcfe3;
+  top: 1%;
+  left: 58%;
+  animation-duration: 181s;
+  animation-delay: -73s;
+  transform-origin: -23vw -1vh;
+  box-shadow: 8vmin 0 1.4346757079689605vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #9fcfe3;
+  top: 97%;
+  left: 100%;
+  animation-duration: 191s;
+  animation-delay: -17s;
+  transform-origin: 5vw 14vh;
+  box-shadow: 8vmin 0 1.395211600851646vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #9fcfe3;
+  top: 28%;
+  left: 28%;
+  animation-duration: 97s;
+  animation-delay: 82s;
+  transform-origin: 5vw 21vh;
+  box-shadow: 8vmin 0 1.8660513922970197vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #9fcfe3;
+  top: 62%;
+  left: 95%;
+  animation-duration: 28s;
+  animation-delay: 84s;
+  transform-origin: 17vw -11vh;
+  box-shadow: 8vmin 0 1.3229177899828009vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #9fcfe3;
+  top: 79%;
+  left: 1%;
+  animation-duration: 56s;
+  animation-delay: -199s;
+  transform-origin: -17vw -1vh;
+  box-shadow: 8vmin 0 1.03697494866549vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #9fcfe3;
+  top: 28%;
+  left: 16%;
+  animation-duration: 246s;
+  animation-delay: -43s;
+  transform-origin: -13vw -18vh;
+  box-shadow: 8vmin 0 1.9848114109696613vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #9fcfe3;
+  top: 54%;
+  left: 33%;
+  animation-duration: 178s;
+  animation-delay: -160s;
+  transform-origin: -4vw -18vh;
+  box-shadow: 8vmin 0 1.6261664438790664vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #9fcfe3;
+  top: 33%;
+  left: 9%;
+  animation-duration: 77s;
+  animation-delay: -229s;
+  transform-origin: -1vw -20vh;
+  box-shadow: 8vmin 0 1.9102732575677581vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #9fcfe3;
+  top: 32%;
+  left: 88%;
+  animation-duration: 105s;
+  animation-delay: -3s;
+  transform-origin: 1vw 2vh;
+  box-shadow: 8vmin 0 1.6352821143521636vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #9fcfe3;
+  top: 33%;
+  left: 38%;
+  animation-duration: 40s;
+  animation-delay: -187s;
+  transform-origin: -12vw -21vh;
+  box-shadow: 8vmin 0 1.9379275879303381vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #9fcfe3;
+  top: 70%;
+  left: 93%;
+  animation-duration: 117s;
+  animation-delay: -47s;
+  transform-origin: -13vw 15vh;
+  box-shadow: 8vmin 0 1.0534957645746466vmin currentColor;
+}
+.background span:nth-child(12) {
+  color: #9fcfe3;
+  top: 97%;
+  left: 2%;
+  animation-duration: 34s;
+  animation-delay: -128s;
+  transform-origin: -19vw 2vh;
+  box-shadow: 8vmin 0 1.1620734578274534vmin currentColor;
+}
+.background span:nth-child(13) {
+  color: #9fcfe3;
+  top: 10%;
+  left: 71%;
+  animation-duration: 28s;
+  animation-delay: -212s;
+  transform-origin: -4vw 17vh;
+  box-shadow: 8vmin 0 1.0820437267196938vmin currentColor;
+}
+.background span:nth-child(14) {
+  color: #9fcfe3;
+  top: 99%;
+  left: 26%;
+  animation-duration: 255s;
+  animation-delay: -29s;
+  transform-origin: -5vw 7vh;
+  box-shadow: 8vmin 0 1.957163955028012vmin currentColor;
+}
+.background span:nth-child(15) {
+  color: #9fcfe3;
+  top: 2%;
+  left: 39%;
+  animation-duration: 98s;
+  animation-delay: -172s;
+  transform-origin: -18vw -2vh;
+  box-shadow: 8vmin 0 1.0808716135968086vmin currentColor;
+}
+.background span:nth-child(16) {
+  color: #9fcfe3;
+  top: 60%;
+  left: 97%;
+  animation-duration: 67s;
+  animation-delay: -176s;
+  transform-origin: -24vw 4vh;
+  box-shadow: 8vmin 0 1.4977890163849386vmin currentColor;
+}
+.background span:nth-child(17) {
+  color: #9fcfe3;
+  top: 45%;
+  left: 87%;
+  animation-duration: 221s;
+  animation-delay: 83s;
+  transform-origin: 25vw -11vh;
+  box-shadow: 8vmin 0 1.9669640425826362vmin currentColor;
+}
+.background span:nth-child(18) {
+  color: #9fcfe3;
+  top: 73%;
+  left: 36%;
+  animation-duration: 147s;
+  animation-delay: -17s;
+  transform-origin: -22vw 16vh;
+  box-shadow: 8vmin 0 1.2934759297616556vmin currentColor;
+}
+.background span:nth-child(19) {
+  color: #9fcfe3;
+  top: 68%;
+  left: 69%;
+  animation-duration: 175s;
+  animation-delay: -59s;
+  transform-origin: 8vw 24vh;
+  box-shadow: 8vmin 0 1.8151622477040763vmin currentColor;
+}
+.background span:nth-child(20) {
+  color: #9fcfe3;
+  top: 97%;
+  left: 30%;
+  animation-duration: 47s;
+  animation-delay: -37s;
+  transform-origin: 24vw 7vh;
+  box-shadow: 8vmin 0 1.5176220978186286vmin currentColor;
+}
+.background span:nth-child(21) {
+  color: #9fcfe3;
+  top: 25%;
+  left: 69%;
+  animation-duration: 84s;
+  animation-delay: -49s;
+  transform-origin: 15vw -18vh;
+  box-shadow: 8vmin 0 1.1147320204732365vmin currentColor;
+}
+.background span:nth-child(22) {
+  color: #9fcfe3;
+  top: 44%;
+  left: 5%;
+  animation-duration: 71s;
+  animation-delay: -249s;
+  transform-origin: 23vw -9vh;
+  box-shadow: 8vmin 0 1.5871792037438885vmin currentColor;
+}
+.background span:nth-child(23) {
+  color: #9fcfe3;
+  top: 88%;
+  left: 66%;
+  animation-duration: 198s;
+  animation-delay: -144s;
+  transform-origin: 8vw 13vh;
+  box-shadow: 8vmin 0 1.5151099481907317vmin currentColor;
+}
+.background span:nth-child(24) {
+  color: #9fcfe3;
+  top: 85%;
+  left: 69%;
+  animation-duration: 246s;
+  animation-delay: -54s;
+  transform-origin: -23vw 25vh;
+  box-shadow: 8vmin 0 1.0159243284858537vmin currentColor;
+}
+.background span:nth-child(25) {
+  color: #9fcfe3;
+  top: 9%;
+  left: 52%;
+  animation-duration: 229s;
+  animation-delay: -44s;
+  transform-origin: -7vw 5vh;
+  box-shadow: 8vmin 0 1.9636992480107243vmin currentColor;
+}
+.background span:nth-child(26) {
+  color: #9fcfe3;
+  top: 82%;
+  left: 56%;
+  animation-duration: 81s;
+  animation-delay: -183s;
+  transform-origin: -18vw -4vh;
+  box-shadow: 8vmin 0 1.9317149719735849vmin currentColor;
+}
+.background span:nth-child(27) {
+  color: #9fcfe3;
+  top: 35%;
+  left: 91%;
+  animation-duration: 6s;
+  animation-delay: -78s;
+  transform-origin: 16vw -17vh;
+  box-shadow: 8vmin 0 1.5697962611114413vmin currentColor;
+}
 .slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transform: translateX(-50%);
-  transition: all 1.5s ease;
+  opacity: 0.5;
+  transform: translateX(-100%);
+  transition: all 3.5s ease;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -31,26 +314,13 @@
 .content {
   position: absolute;
   text-align: center;
-  top: 15rem;
-  left: 50%;
+  top: 20rem;
+  left: 7%;
   opacity: 0;
-  width: 30%;
   padding: 3rem;
   display: flex;
-  justify-self: center;
-  align-items: center;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50px;
-
-
-  h2 {
-    font-size: 4.5rem;
-
-  }
 }
-
-
 
 @media screen and (max-width: 600px) {
   .content {
@@ -58,15 +328,30 @@
   }
 }
 
-.content > * {
+.text-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.text {
+  font-size: 40px;
+  margin-left: 30px;
   color: #fff;
   margin-bottom: 1rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Imbue", serif;
+}
+.title {
+  font-size: 7.5rem;
+  font-family: "Phudu", cursive;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
 .current {
   opacity: 1;
   transform: translateX(0);
+  pointer-events: auto;
 }
 
 .current .content {
@@ -74,7 +359,7 @@
 }
 .arrow {
   border-radius: 50%;
-  background: transparent;
+  background-color: rgba(81, 154, 196, 0.3);
   color: #fff;
   width: 2.5rem;
   height: 2.5rem;
@@ -87,16 +372,16 @@
 }
 
 .arrow:hover {
-  background: #fff;
+  background-color: rgba(81, 154, 196, 0.7);
 }
 
 .next {
   right: 1.5rem;
-  color: orangered;
+  border-radius: 27% 73% 75% 25% / 30% 47% 53% 70%;
 }
 .prev {
   left: 1.5rem;
-  color: orangered;
+  border-radius: 71% 29% 31% 69% / 49% 40% 60% 51%;
 }
 
 hr {
@@ -108,77 +393,8 @@ hr {
 .link {
   text-decoration: none;
   font-size: 20px;
-  &:visited {
-    color: red;
-  }
-
-
 }
-
-.button {
-  all: unset;
-  width: 100px;
-  height: 30px;
-  font-size: 16px;
-  background: transparent;
-  border: none;
-  position: relative;
-  color: #f0f0f0;
-  cursor: pointer;
-  z-index: 1;
-  padding: 10px 20px;
+.button-box{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.button::after,
-.button::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -99999;
-  transition: all .4s;
-}
-
-.button::before {
-  transform: translate(0%, 0%);
-  width: 100%;
-  height: 100%;
-  background: #28282d;
-  border-radius: 10px;
-}
-
-.button::after {
-  transform: translate(10px, 10px);
-  width: 35px;
-  height: 35px;
-  background: #ffffff15;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 50px;
-}
-
-.button:hover::before {
-  transform: translate(5%, 20%);
-  width: 110%;
-  height: 110%;
-}
-
-.button:hover::after {
-  border-radius: 10px;
-  transform: translate(0, 0);
-  width: 100%;
-  height: 100%;
-}
-
-.button:active::after {
-  transition: 0s;
-  transform: translate(0, 5%);
+  justify-content: flex-start;
 }

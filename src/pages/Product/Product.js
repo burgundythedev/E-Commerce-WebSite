@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import ProductFilter from "./ProductFilter/ProductFilter";
+import React, { useEffect } from "react";
 import ProductList from "./ProductList/ProductList";
 import useFetchProductList from "../../customHooks/useFetchProductList";
 import Loader from "../../Loader/Loader";
@@ -11,31 +10,39 @@ const Product = () => {
   const { displayList, isLoading } = useFetchProductList("products");
   const products = useSelector(selectProduct);
   const dispatch = useDispatch();
-  const [isFilterVisible, setIsFilterVisible] = useState(false);
 
   useEffect(() => {
     dispatch(STORE_PRODUCTS({ products: displayList }));
   }, [dispatch, displayList, products]);
 
-  const toggleFilterVisibility = () => {
-    setIsFilterVisible((prevState) => !prevState);
-  };
-
   return (
     <React.Fragment>
       {isLoading && <Loader />}
       <div className="shop">
-        {isFilterVisible && !isLoading && (
-          <aside className="shop__filter">
-            <ProductFilter />
-          </aside>
-        )}
-
+        <div className="shop__background">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div className="shop__content">
-          <ProductList
-            list={products}
-            toggleFilterVisibility={toggleFilterVisibility}
-          />
+          <ProductList list={products} />
         </div>
       </div>
     </React.Fragment>

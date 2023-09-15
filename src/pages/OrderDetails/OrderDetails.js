@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import useFetchDetails from "../../customHooks/useFetchDetails";
-
+import "./OrderDetails.scss";
 const OrderDetails = () => {
   const [order, setOrder] = useState(null);
   const { id } = useParams();
@@ -13,23 +13,54 @@ const OrderDetails = () => {
 
   return (
     <div className="order-d">
-      <h2>Order details</h2>
-      <div>
-        <Link to="/order-history">&larr; Back to My Orders</Link>
+      <div className="order-d__background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h2 className="order-d__title">Order details</h2>
+      <div className="order-d__back-link">
+        <Link className="order-d__link" to="/order-history">
+          &larr; My Orders
+        </Link>
       </div>
       {order === null ? (
-        <p>We're not able to display your order details, Try again!</p>
+        <p className="order-d__title">
+          We're not able to display your order d, Try again!
+        </p>
       ) : (
         <>
-          <p>
-            <b>Order Id</b> {order.id}
-          </p>
-          <p>
-            <b>Order Amount</b> ${order.orderAmount}
-          </p>
-          <p>
-            <b>Order Status</b> {order.orderStatus}
-          </p>
+          <div className="order-d__container-details">
+            <b className="order-d__bold">Order Id:</b>
+            <p className="order-d__text">{order.id}</p>
+          </div>
+          <div className="order-d__container-details">
+            <b className="order-d__bold">Order Amount:</b>
+            <p className="order-d__text">${order.orderAmount}</p>
+          </div>
+          <div className="order-d__container-status">
+            <b className="order-d__bold">Current order status:</b>
+            <p className="order-d__text order-details__text--status">
+              {order.orderStatus}
+            </p>
+          </div>
           <table className="order-d__table">
             <thead className="order-d__thead">
               <tr className="order-d__tr">

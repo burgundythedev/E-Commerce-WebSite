@@ -7,7 +7,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <h1 className="footer__text">&copy;{year}</h1>
-      <h1 className="footer__text">Github: @burgundythedev</h1>
+      <h1 className="footer__text">
+        Github: @burgundythedev/this website is not official
+      </h1>
     </div>
   );
 };

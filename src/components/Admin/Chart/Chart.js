@@ -1,4 +1,5 @@
 import React from "react";
+import "./Chart.scss";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,6 +11,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { useSelector } from "react-redux";
+
 import { selectOrderHistory } from "../../../store/slice/orderSlice";
 ChartJS.register(
   CategoryScale,
@@ -61,13 +63,12 @@ const Chart = () => {
       {
         label: "Order Count",
         data: [placed, processing, shipped, delivered],
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        backgroundColor: "rgb(226, 135, 67, 0.8)",
       },
     ],
   };
   return (
     <div className="chart">
-      <h3>Order Status Graphic</h3>
       <Bar options={options} data={data} />
     </div>
   );

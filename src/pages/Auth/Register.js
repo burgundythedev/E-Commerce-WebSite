@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Register.scss";
-import registerLogo from "../../assets/img/login.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
@@ -93,19 +92,42 @@ const Register = () => {
               </button>
             </div>
             <div className="register__register">
-              <p className="register__text">Already an account</p>
+              <p className="register__text">Already have an account</p>
               <Link className="register__text-register" to="/login">
                 Login
               </Link>
             </div>
           </form>
         </div>
-        <div className="register__box-img">
-          <img
-            className="register__img"
-            src={registerLogo}
-            alt="register-img"
-          />
+        <div className="register__background">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </React.Fragment>

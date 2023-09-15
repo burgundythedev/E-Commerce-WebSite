@@ -37,95 +37,126 @@ const Contact = () => {
   };
   return (
     <div className="contact-form">
+      <div className="contact-form__background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <h2 className="contact-form__title">Contact Us</h2>
-      <form className="contact-form__form" onClick={handleSubmit}>
-        <div className="contact-form__field">
-          <label htmlFor="name" className="contact-form__label">
-            Name
-          </label>
-          <input
-            placeholder="Full Name"
-            type="text"
-            id="name"
-            name="name"
-            className="contact-form__input"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+      <p className="contact-form__text"></p>
+      <div className="contact-form__container">
+        <form className="contact-form__form" onClick={handleSubmit}>
+          <div className="contact-form__field">
+            <label htmlFor="name" className="contact-form__label">
+              Name:
+            </label>
+            <input
+              placeholder="Full Name"
+              type="text"
+              id="name"
+              name="name"
+              className="contact-form__input"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="contact-form__field">
+            <label htmlFor="email" className="contact-form__label">
+              Email:
+            </label>
+            <input
+              placeholder="Email"
+              type="email"
+              id="email"
+              name="email"
+              className="contact-form__input"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="contact-form__field">
+            <label htmlFor="subject" className="contact-form__label">
+              Subject:
+            </label>
+            <input
+              placeholder="Subject"
+              type="text"
+              id="subject"
+              name="subject"
+              className="contact-form__input"
+              required
+              value={formData.subject}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="contact-form__field">
+            <label htmlFor="message" className="contact-form__label">
+              Message:
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              className="contact-form__textarea"
+              required
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+          <div className="contact-form__button-box">
+            <button type="submit" className="contact-form__submit">
+              Submit
+            </button>
+          </div>
+        </form>
+        <div className="contact-form__details">
+          <h2 className="contact-form__details-title">Contact Informations</h2>
+          <p className="contact-form__details-text">
+            Fill the form or use other channels listed below
+          </p>
+          <span className="contact-form__details-contacts">
+            <img className="contact-form__img" src={phone} alt="icon-contact" />
+            <p>+33 172586789</p>
+          </span>
+          <span className="contact-form__details-contacts">
+            <img className="contact-form__img" src={mail} alt="icon-contact" />
+            <p>support@eshop.com</p>
+          </span>
+          <span className="contact-form__details-contacts">
+            <img
+              className="contact-form__img"
+              src={location}
+              alt="icon-contact"
+            />
+            <p>Paris, France</p>
+          </span>
+          <span className="contact-form__details-contacts">
+            <img
+              className="contact-form__img"
+              src={github}
+              alt="icon-contact"
+            />
+            <p>@burgundythedev</p>
+          </span>
         </div>
-        <div className="contact-form__field">
-          <label htmlFor="email" className="contact-form__label">
-            Email
-          </label>
-          <input
-            placeholder="Email"
-            type="email"
-            id="email"
-            name="email"
-            className="contact-form__input"
-            required
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="contact-form__field">
-          <label htmlFor="subject" className="contact-form__label">
-            Subject
-          </label>
-          <input
-            placeholder="Subject"
-            type="text"
-            id="subject"
-            name="subject"
-            className="contact-form__input"
-            required
-            value={formData.subject}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="contact-form__field">
-          <label htmlFor="message" className="contact-form__label">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            className="contact-form__textarea"
-            required
-            value={formData.message}
-            onChange={handleChange}
-          ></textarea>
-        </div>
-        <div className="contact-form__field">
-          <button type="submit" className="contact-form__submit">
-            Submit
-          </button>
-        </div>
-      </form>
-      <div className="contact-form__details">
-        <h2>Our Contact Information</h2>
-        <p>Fill the form or use other channels listed below</p>
-        <span className="contact-form__details-box">
-          <img className="contact-form__img" src={phone} alt="icon-contact" />
-          <p>+33 472586789</p>
-        </span>
-        <span className="contact-form__details-box">
-          <img className="contact-form__img" src={mail} alt="icon-contact" />
-          <p>support@eshop.com</p>
-        </span>
-        <span className="contact-form__details-box">
-          <img
-            className="contact-form__img"
-            src={location}
-            alt="icon-contact"
-          />
-          <p>Paris, France</p>
-        </span>
-        <span className="contact-form__details-box">
-          <img className="contact-form__img" src={github} alt="icon-contact" />
-          <p>@burgundythedev</p>
-        </span>
       </div>
     </div>
   );

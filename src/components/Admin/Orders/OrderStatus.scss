@@ -1,0 +1,33 @@
+.status {
+
+  &__select {
+    width: 170px;
+    padding: 2px;
+    border: 1px solid rgba(226, 135, 67, 0.5);
+    border-radius: 10px;
+    font-size: 20px;
+    border-color: rgba(159, 207, 227, 1);
+
+    &:focus {
+      border-color: rgba(159, 207, 227, 1);
+    }
+  }
+  &__button {
+    background-color: rgba(226, 135, 67, 0.3);
+    border-radius: 50px;
+    border-width: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 15px;
+    height: 30px;
+    padding: 0 25px;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    margin-left: 15px;
+
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+        rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+    }
+  }
+}

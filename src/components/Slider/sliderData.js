@@ -1,22 +1,27 @@
+import imgSlider1 from "../../assets/img/villabulle1.jpg";
+import imgSlider2 from "../../assets/img/villabulle2.jpg";
+import imgSlider3 from "../../assets/img/villabulle3.jpg";
+import imgSlider4 from "../../assets/img/villabulle4.jpg";
+
 export const sliderData = [
   {
-    image: "https://i.ibb.co/CBGRLhG/bg-4.jpg",
-    heading: "Shoes Villa",
-    desc: "Up to 30% off on all onsale proucts.",
+    image: imgSlider1,
+    heading: "Design",
+    desc: "LA résidence préférée de Pierre Cardin",
   },
   {
-    image: "https://i.ibb.co/cDLBk5h/bg-1.jpg",
-    heading: "Women Fashion",
-    desc: "Up to 30% off on all onsale proucts.",
+    image: imgSlider2,
+    heading: "Explore",
+    desc: "EXPLORER les rondeurs organiques de cette maison sculpture",
   },
   {
-    image: "https://i.ibb.co/HXjD3V0/bg-2.jpg",
-    heading: "Men Fashion",
-    desc: "Up to 30% off on all onsale proucts.",
+    image: imgSlider3,
+    heading: "Dream",
+    desc: "RÊVER d'un espace enchanteur",
   },
   {
-    image: "https://i.ibb.co/H2FRmtV/bg-3.jpg",
-    heading: "Awesome Gadgets",
-    desc: "Up to 30% off on all onsale proucts.",
+    image: imgSlider4,
+    heading: "Party",
+    desc: "PRIVATISER le Palais Bulles pour une invitation à la fête",
   },
 ];

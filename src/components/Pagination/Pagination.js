@@ -44,17 +44,23 @@ const Pagination = ({
   return (
     <ul className="pagination">
       <li
-        className={currentPage === 1 ? "disabled" : "pagination__li"}
+        className={
+          currentPage === 1 ? "pagination__li--active" : "pagination__li"
+        }
         onClick={paginatePrevious}
       >
-        Previous
+        <div className="pagination__arrow-prev" alt="arrow-slider"></div>
       </li>
 
       {pageNumbers.map((number) => {
         if (number <= maxPageNumberLimit && number >= minPageNumberLimit) {
           return (
             <li
-              className={currentPage === number ? "active" : "pagination__li"}
+              className={
+                currentPage === number
+                  ? "pagination__li--active"
+                  : "pagination__li"
+              }
               key={number}
               onClick={() => paginate(number)}
             >
@@ -67,16 +73,20 @@ const Pagination = ({
       })}
 
       <li
-        className={currentPage === totalPages ? "disabled" : "pagination__li"}
+        className={
+          currentPage === totalPages
+            ? "pagination__li--active"
+            : "pagination__li"
+        }
         onClick={paginateNext}
       >
-        Next
+        <div className="pagination__arrow-next" alt="arrow-slider"></div>
       </li>
-      <p>
-        <b className="pagination__page"> {`Page ${currentPage}`}</b>
-        <span>{` of `}</span>
-        <b>{`${totalPages}`}</b>
-      </p>
+      <li className="pagination__total-box">
+        <b className="pagination__page"> {currentPage}</b>
+        <span> of </span>
+        <b>{totalPages}</b>
+      </li>
     </ul>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import useFetchDetails from "../../../customHooks/useFetchDetails";
 import OrderStatus from "./OrderStatus";
-
+import "./OrdersDetails.scss";
 const OrdersDetails = () => {
   const [order, setOrder] = useState(null);
   const { id } = useParams();
@@ -14,33 +14,51 @@ const OrdersDetails = () => {
 
   return (
     <div className="orders-details">
-      <h2>Order details</h2>
-      <div>
-        <Link to="/admin/home">&larr; Return to statistical summary</Link>
+      <h2 className="orders-details__title">Order details</h2>
+      <div className="orders-details__back-link">
+        <Link className="orders-details__link" to="/admin/home">
+          &larr; Return to statistical summary
+        </Link>
       </div>
       {order === null ? (
-        <p>We're not able to display your order details, Try again!</p>
+        <p className="orders-details__title">
+          We're not able to display your order details, Try again!
+        </p>
       ) : (
         <>
-          <div>
-            <p>
-              <b>Order Id:</b> {order.id}
-            </p>
-            <p>
-              <b>Order Amount:</b> ${order.orderAmount}
-            </p>
-            <p>
-              <b>Current order status:</b>
-              {order.orderStatus}
-            </p>
-            <div>
-              <b>Shipping Address:</b>
+          <div className="orders-details__container">
+            <div className="orders-details__container-details">
+              <b className="orders-details__bold">Order Id:</b>
+              <p className="orders-details__text">{order.id}</p>
+            </div>
+            <div className="orders-details__container-details">
+              <b className="orders-details__bold">Order Amount:</b>
+              <p className="orders-details__text">${order.orderAmount}</p>
+            </div>
+            <div className="orders-details__container-details orders-details__container-details--status">
+              <div className="orders-details__container-status">
+                <b className="orders-details__bold">Current order status:</b>
+                <p className="orders-details__text orders-details__text--status">
+                  {order.orderStatus}
+                </p>
+              </div>
+              <OrderStatus order={order} id={id} />
+            </div>
+            <div className="orders-details__container-details">
+              <b className="orders-details__bold">Name:</b>
+              <p className="orders-details__text">{order.userAddress.name}</p>
+            </div>
+            <div className="orders-details__container-details">
+              <b className="orders-details__bold">Shipping Address:</b>
+              <p className="orders-details__text">{order.userAddress.adress}</p>
+              <p className="orders-details__text">
+                {order.userAddress.postal_code}
+              </p>
               <br />
-              {order.userAddress.name}
-              <br />
-              {order.userAddress.adress} <br />
-              {order.userAddress.postal_code} {order.userAddress.city},&nbsp;
-              {order.userAddress.country}.
+              <p className="orders-details__text">
+                {order.userAddress.city},&nbsp;
+                {order.userAddress.country}.
+              </p>
             </div>
           </div>
 
@@ -64,9 +82,7 @@ const OrdersDetails = () => {
                       <b>{index + 1}</b>
                     </td>
                     <td className="orders-details__td">
-                      <p>
-                        <b>{name}</b>
-                      </p>
+                      <b>{name}</b>
                     </td>
                     <td className="orders-details__td">{price}</td>
                     <td className="orders-details__td">{cartQuantity}</td>
@@ -80,7 +96,6 @@ const OrdersDetails = () => {
           </table>
         </>
       )}
-      <OrderStatus order={order} id={id} />
     </div>
   );
 };

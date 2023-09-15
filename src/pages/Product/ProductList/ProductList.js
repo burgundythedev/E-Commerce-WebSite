@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ProductList.scss";
 import alignGrid from "../../../assets/img/align-grid.png";
-import iconGrid from "../../../assets/img/icon-grid.png";
+import iconGrid from "../../../assets/img/grid.png";
 import ProductItem from "../ProductItem/ProductItem";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -9,6 +9,7 @@ import {
   selectFilteredCategories,
 } from "../../../store/slice/filterSlice";
 import Pagination from "../../../components/Pagination/Pagination";
+import ProductFilter from "../ProductFilter/ProductFilter";
 const ProductList = ({ list, toggleFilterVisibility, isFilterVisible }) => {
   const [grid, setGrid] = useState(true);
   const [sort, setSort] = useState("category");
@@ -47,16 +48,9 @@ const ProductList = ({ list, toggleFilterVisibility, isFilterVisible }) => {
             }}
             className="product-list__icon"
           />
-          <div>
-            <button onClick={toggleFilterVisibility}>
-              {isFilterVisible ? "Hide Filter" : "Show Filter"}
-            </button>
-          </div>
         </div>
+        <ProductFilter />
         <div className="product-list__sort">
-          <label htmlFor="sort-select" className="product-list__label">
-            Sort by
-          </label>
           <select
             id="sort-select"
             value={sort}
@@ -69,7 +63,7 @@ const ProductList = ({ list, toggleFilterVisibility, isFilterVisible }) => {
               }
             }}
           >
-            <option>Choose your option</option>
+            <option className="product-list__option">Choose your option</option>
             <option value="a-z" className="product-list__option">
               A-Z
             </option>

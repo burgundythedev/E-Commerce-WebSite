@@ -1,129 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+
 .cart {
   padding: 5px;
-  width: 100%;
-  overflow-x: auto;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgb(159, 207, 227, 0.2);
+
+  padding: 50px;
+  border-radius: 50px;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 50px 50px 50px;
+  }
   &__img {
-    width: 150px;
+    width: 250px;
     height: 150px;
+    border-radius: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
-  &__table {
-    border-collapse: collapse;
-    width: 100%;
-    font-size: 1.4rem;
-  }
-
-  &__thead {
-    border-top: 2px solid blue;
-    border-bottom: 2px solid blue;
-  }
-
-  &__th,
-  &__td {
-    vertical-align: top;
-    text-align: left;
-    padding: 8px;
-  }
-
-  &__th {
-    border: 1px solid #eee;
-  }
-
-  &__tr {
-    border-bottom: 1px solid #ccc;
-  }
-
-  &:nth-child(even) {
-    background-color: #eee;
-  }
-
-  &__count {
+  &__description-box {
+    margin-left: 100px;
     display: flex;
-    align-items: center;
-  }
-
-  &__button {
-    border: 1px solid grey;
-    margin-right: 1rem;
-    border-radius: 5px;
-    &--right {
-      margin-left: 1rem;
-    }
-    &--clear {
-      align-items: center;
-      background-clip: padding-box;
-      background-color: #fa6400;
-      border: 1px solid transparent;
-      border-radius: 0.25rem;
-      box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-      box-sizing: border-box;
-      color: #fff;
-      cursor: pointer;
-      display: inline-flex;
-      font-size: 16px;
-      font-weight: 600;
-      justify-content: center;
-      line-height: 1.25;
-      margin: 0;
-      min-height: 3rem;
-      padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
-      position: relative;
-      text-decoration: none;
-      transition: all 250ms;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      vertical-align: baseline;
-      width: auto;
-    }
-
-    &--checkout {
-  
-      backface-visibility: hidden;
-      background-color: #405cf5;
-      border-radius: 6px;
-      border-width: 0;
-      box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-        rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
-      box-sizing: border-box;
-      color: #fff;
-      cursor: pointer;
-      font-family: -apple-system, system-ui, "Segoe UI", Roboto,
-        "Helvetica Neue", Ubuntu, sans-serif;
-      font-size: 100%;
-      height: 44px;
-      line-height: 1.15;
-      margin: 12px 0 0;
-      outline: none;
-      overflow: hidden;
-      padding: 0 25px;
-      position: relative;
-      text-align: center;
-      text-transform: none;
-      transform: translateZ(0);
-      transition: all 0.2s, box-shadow 0.08s ease-in;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      width: 100%;
-    }
-  }
-
-  &__summary {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  &__card {
-    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
   }
   &__text {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 20px;
+    &--price {
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+    }
   }
-  &__h3 {
-    color: aquamarine;
+
+  &__bar-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__bar {
+    background-color: #ccc;
+    height: 1px;
+    width: 90%;
+  }
+
+  &__continue-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+  }
+  &__continue {
+    margin-bottom: 25px;
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(226, 135, 67, 1);
+    &:visited {
+      color: black;
+    
+    }
+    &:hover{
+      color: rgb(226, 135, 67, 1);
+    }
+  }
+  &__button {
+    border: 1px solid grey;
+    background-color: black;
+    margin-right: 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    &--right {
+      margin-left: 1rem;
+    }
+    &--clear {
+      background-color: rgb(226, 135, 67, 0.5);
+      border-radius: 50px;
+      border-width: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 20px;
+      height: 44px;
+      line-height: 1.15;
+      margin: 0;
+      padding: 0 25px;
+      position: relative;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      width: 15rem;
+
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+          rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+      }
+    }
+
+    &--checkout {
+      background-color: rgb(226, 135, 67, 0.5);
+      border-radius: 50px;
+      border-width: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 20px;
+      height: 44px;
+      line-height: 1.15;
+      padding: 0 25px;
+      position: relative;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      width: 15em;
+
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+          rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+      }
+    }
+  }
+
+  &__summary {
+    margin-right: 50px;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__checkout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-quantity {
+    font-size: 20px;
+  }
+
+  &__subtotal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__price {
+    margin-left: 20px;
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    color: rgb(226, 135, 67, 1);
+  }
+
+  &__total-quantity {
+    font-size: 25px;
+    margin: 20px;
+    color: rgb(226, 135, 67, 0.7);
   }
 }

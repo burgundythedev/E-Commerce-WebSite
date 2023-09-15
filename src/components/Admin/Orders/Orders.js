@@ -23,15 +23,17 @@ const Orders = () => {
 
   return (
     <div className="orders">
-      <h3> All Orders</h3>
-      <p>
-        Open an order to change <b>Order Status</b>
-      </p>
+      <h3 className="orders__title">
+        All Orders
+        <p className="orders__description">
+          Open an order to change: <b className="orders__bold">order status</b>
+        </p>
+      </h3>
       <>
         {isLoading && <Loader />}
         <div>
           {orderHistory.lenght === 0 ? (
-            <p>No order found</p>
+            <p className="orders__title">No order found</p>
           ) : (
             <table className="orders__table">
               <thead className="orders__thead">

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
 
 const initialState = {
   cartItems: localStorage.getItem("cartItems")
@@ -23,33 +22,35 @@ const cartSlice = createSlice({
       } else {
         const tempProduct = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(tempProduct);
-        toast.success("Product added to Cart", { position: "top-left" });
       }
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     DECREASE_FROM_CART(state, action) {
-      const productIndex = state.cartItems.findIndex(
-        (item) => item.id === action.payload.id
-      );
+      const { id } = action.payload;
+      const productIndex = state.cartItems.findIndex((item) => item.id === id);
+
       if (productIndex < 0) return;
-      if (state.cartItems[productIndex].cartQuantity > 1) {
-        state.cartItems[productIndex].cartQuantity -= 1;
+
+      const currentItem = state.cartItems[productIndex];
+
+      if (currentItem.cartQuantity > 1) {
+        currentItem.cartQuantity -= 1;
       } else {
         state.cartItems.splice(productIndex, 1);
-        toast.warning("Product removed from Cart", { position: "top-left" });
       }
+
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
+
     REMOVE_FROM_CART(state, action) {
       const productId = action.payload.id;
       const productIndex = state.cartItems.findIndex(
         (item) => item.id === productId
       );
 
-      if (productIndex < 0) return;
-
-      state.cartItems.splice(productIndex, 1);
-      toast.error("Product removed from Cart", { position: "top-left" });
+      if (productIndex >= 0) {
+        state.cartItems.splice(productIndex, 1);
+      }
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     CLEAR_CART(state) {

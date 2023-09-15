@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.scss";
-import login from "../../assets/img/login-password.png";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 import auth from "../../firebase/Config";
@@ -41,7 +40,6 @@ const Login = () => {
     signInWithEmailAndPassword(loginUser, email, password)
       .then((userCredential) => {
         setIsLoading(false);
-        toast.success("Welcome to your account!");
         navigateUser();
       })
       .catch((error) => {
@@ -54,8 +52,27 @@ const Login = () => {
     <React.Fragment>
       {isLoading && <Loader />}
       <div className="login">
-        <div className="login__box-img">
-          <img className="login__img" src={login} alt="login-img" />
+        <div className="login__background">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div className="login__form-box">
           <h2 className="login__title">LOGIN</h2>

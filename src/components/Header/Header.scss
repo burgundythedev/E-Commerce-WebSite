@@ -1,20 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Phudu&display=swap");
+
 .header {
-  width: 100%;
-  height: 8rem;
+  height: 3rem;
   padding: 10px;
-  background-color: rgb(0, 33, 87, 0.8);
+  background-color: white;
   display: flex;
-
   align-items: center;
-
-  &__logo {
-    display: flex;
-    justify-content: flex-start;
+  justify-content: space-between;
+  @keyframes move {
+    100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
   }
-  &__logo-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 100px;
+
+  &__title-box {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    &:visited {
+      color: black;
+    }
+  }
+  &__bubbles {
+    width: 23px;
+    height: 23px;
+    margin-left: 10px;
+    animation: rotate-in-down-left 4s ease;
+
+    @keyframes rotate-in-down-left {
+      0% {
+        transform-origin: left bottom;
+        transform: rotate(-90deg);
+        opacity: 0;
+      }
+      100% {
+        transform-origin: left bottom;
+        transform: rotate(0);
+        opacity: 1;
+      }
+    }
+  }
+  &__title {
+    font-size: 25px;
+    font-family: "Phudu", cursive;
   }
   &__nav-bar {
     width: 100%;
@@ -26,10 +55,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 100px;
   }
   &__auth {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -41,37 +70,50 @@
   &__item {
     list-style-type: none;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 30px;
+
     padding: 20px;
   }
 
   &__links {
     text-decoration: none;
-    font-size: 20px;
+
     &:visited {
       color: black;
     }
 
+    &.active {
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      text-decoration-color: #9fcfe3;
+      text-decoration-thickness: 1px;
+    }
+  }
+
+  &__logout {
+    text-decoration: none;
+    font-size: 20px;
+    &:visited {
+      color: black;
+    }
     &:hover {
       color: red;
-    }
-    &.active {
-      text-decoration: underline 8px solid red;
     }
   }
   &__userName {
     font-family: "Josefin Sans", sans-serif;
     text-decoration: none;
     font-size: 10px;
-    color: yellow;
-   
+    color: #9fcfe3;
   }
-  &__cart {
-    width: 200px;
+
+  &__user-container {
+    display: flex;
+    flex-direction: row;
+  }
+  &__cart { 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
   }
 
   &__link-cart {
@@ -79,86 +121,39 @@
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-
-    &:visited {
-      color: black;
-    }
-
-    &:hover {
-      color: red;
-    }
+  }
+  &__login-logo {
+    width: 30px;
+    height: 30px;
   }
   &__cart-logo {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    padding: 20px;
   }
   &__text {
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
     font-family: "Josefin Sans", sans-serif;
   }
-  @media (max-width: 360px) {
-    &__logo-img {
-      width: 50px;
-      height: 50px;
-    }
-    &__nav-bar {
-      width: 100%;
-    }
-    &__home {
-      margin: 0;
-      flex-direction: column;
-    }
-    &__auth {
-      flex-direction: column;
-    }
-    &__item {
-      padding: 10px;
-    }
-    &__links {
-      font-size: 10px;
-    }
-    &__cart {
-      width: 50px;
-    }
 
-    &__cart-logo {
-      width: 20px;
-      height: 20px;
-    }
-    &__text {
-      font-size: 10px;
-      padding: 5px;
-    }
-  }
-  &__button-admin {
-    backface-visibility: hidden;
-    background-color: #405cf5;
-    border-radius: 6px;
-    border-width: 0;
-    box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-      rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 20px;
-    height: 44px;
-;
-    margin: 12px 0 0;
-    outline: none;
-    overflow: hidden;
-    padding: 0 25px;
-    position: relative;
-    text-align: center;
-    text-transform: none;
-    transform: translateZ(0);
-    transition: all 0.2s, box-shadow 0.08s ease-in;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 100%;
+  &__span-admin {
+    font-size: 12px;
+    padding: 10px;
+    background-color: rgb(159, 207, 227, 0.3);
+    border-radius: 10px;
   }
 
+  @media (max-width: 1000px) {
+    .header {
+      flex-direction: column;
+    }
+    .header__links.hide-text {
+      text-indent: -9999px;
+    }
 
+    .header__links.hide-text img {
+      display: block;
+    }
+  }
 }

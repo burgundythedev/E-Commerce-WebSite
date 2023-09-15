@@ -1,16 +1,19 @@
 .info {
   width: 100%;
-  max-width: 25rem;
+  max-width: 15rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
   &__title {
-    font-size: 25px;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(226, 135, 67, 0.8);
   }
   &__card {
     border: 1px solid #ccc;
-    border-bottom: 3px solid lightblue;
+    border-bottom: 3px solid rgb(159, 207, 227, 1);
     padding: 5px;
     background-color: #f5f6fa;
+    border-radius: 20px;
   }
 
   &__span {
@@ -18,9 +21,12 @@
     justify-content: space-between;
     align-items: center;
   }
-
-  &__icon{
-    width: 50px;
-    height: 50px;
+  &__count {
+    font-size: 15px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
   }
 }

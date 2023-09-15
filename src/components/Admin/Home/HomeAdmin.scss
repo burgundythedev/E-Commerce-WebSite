@@ -1,6 +1,32 @@
 .home-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(159, 207, 227, 0.2);
+  &__title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+
+    &--title {
+      margin-left: 50px;
+    }
+    &--chart {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
   &__container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  &__info-box {
+    padding: 50px;
+  }
+  &__chart-container {
+    width: 50%;
+  }
+  &__order-container {
+    margin-left: 50px;
   }
 }

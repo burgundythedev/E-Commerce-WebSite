@@ -24,9 +24,8 @@ const ProductFilter = () => {
   };
   return (
     <div className="filter">
-      <h4 className="filter__title">Categories</h4>
       <div className="filter__category">
-        <ul className="navbar__list">
+        <ul className="filter__list">
           {allCat.map((cat, index) => {
             return (
               <li
@@ -44,12 +43,10 @@ const ProductFilter = () => {
               </li>
             );
           })}
+          <button className="filter__button" onClick={clearFilter}>
+            Clear Filter
+          </button>
         </ul>
-      </div>
-      <div className="filter__button-container">
-        <button className="filter__button" onClick={clearFilter}>
-          Clear Filter
-        </button>
       </div>
     </div>
   );

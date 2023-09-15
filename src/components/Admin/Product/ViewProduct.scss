@@ -1,32 +1,33 @@
 .view {
-  padding: 5px;
-  width: 100%;
+  padding-left: 5px;
   overflow-x: auto;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: rgb(226, 135, 67, 0.1);
+  display: flex;
+  justify-content: center;
 
+  &__title {
+    font-size: 30px;
+  }
   &__table {
     border-collapse: collapse;
-    width: 100%;
     font-size: 1rem;
   }
 
   &__thead {
-    border: 2px solid black;
+    border: 1px solid black;
   }
 
   &__th {
-    border: 2px solid black;
+    border: 1px solid black;
     text-align: center;
-    padding: 15px;
-    background-color: lightblue;
-}
-
-
-  
+    padding: 10px;
+    background-color: rgb(159, 207, 227, 0.5);
+  }
 
   &__td {
-    padding: 20px;
-    border: 2px solid black;
+    padding: 15px;
+    border: 1px solid black;
     text-align: center;
     &--icon {
       padding: 0;
@@ -35,20 +36,28 @@
   &__container-icon {
     width: auto;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     border: none;
   }
   &__img {
-    width: 200px;
-    height: 150px;
-    border-radius: 15px;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
   }
   &__icon {
-    width: 25px;
+    width: 20px;
     margin: 10px;
+    background-color: rgb(159, 207, 227, 0.5);
+    padding: 15px;
+    border-radius: 50px;
     cursor: pointer;
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+        rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+    }
   }
   &__tr {
-    border: 2px solid black;
+    border: 1px solid black;
   }
 }
