@@ -110,9 +110,11 @@ const Cart = () => {
             In your cart:
             <b className="cart__total-quantity">{cartTotalQuantity} items</b>
           </p>
-          <Link className="cart__continue" to="/products">
-            &larr; Continue Shopping
-          </Link>
+          {cartItems.length === 0 ? null : (
+            <Link className="cart__continue" to="/products">
+              &larr; Continue Shopping
+            </Link>
+          )}
           <button
             className="cart__button cart__button--clear"
             onClick={() => handleClearCart()}

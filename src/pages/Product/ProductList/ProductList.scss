@@ -6,34 +6,10 @@
     border-bottom: 1px solid #ccc;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     height: 100px;
     margin-top: 100px;
-  }
-
-  &__icons-container {
-    width: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 25px;
-  }
-
-  &__icon {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-right: 15px;
-    animation: pulse 5s infinite ease-in-out alternate;
-
-    @keyframes pulse {
-      from {
-        transform: scale(1);
-      }
-      to {
-        transform: scale(1.2);
-      }
-    }
   }
 
   &__label {
@@ -60,12 +36,11 @@
       padding-bottom: 5px;
     }
   }
-
 }
 
 .grid {
   margin: 100px 0px 100px 0px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
 }

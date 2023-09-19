@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
+  background-color: rgba(226, 135, 67, 0.1);
   &__img {
     width: 200px;
     animation: slide-down 0.5s ease;
@@ -15,15 +15,13 @@
     animation: slide-up 0.5s ease;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 20px;
-    padding: 10px;
- 
+    padding: 20px;
   }
   &__title {
     text-align: center;
     margin: 10px 0px 10px 0px;
-    font-family: "Tilt Prism", cursive;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 45px;
-    color: #405cf5;
   }
   &__form {
     font-size: 1.6rem;
@@ -45,48 +43,46 @@
     display: flex;
     justify-content: center;
   }
-  &__button {
-    background-color: #405cf5;
-    border-radius: 6px;
-    border-width: 0;
-    box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-      rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    font-size: 70%;
-    height: 44px;
-    line-height: 1.15;
-    padding: 0 25px;
-    position: relative;
-    text-align: center;
-    width: 22rem;
- 
-  }
 
   &__register {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 1rem;
-
   }
+  &__button {
+    background-color: rgba(226, 135, 67, 0.3);
+    border-radius: 50px;
+    border-width: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 15px;
+    height: 50px;
+    padding: 0 25px;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
 
+    width: 22rem;
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+        rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+    }
+  }
   &__text-register {
     font-family: "Josefin Sans", sans-serif;
     text-decoration: none;
     font-size: 20px;
-    background-color: #c0c0c0;
+    background-color: rgba(159, 207, 227, 1);
     padding: 7px;
     border-radius: 5px;
-
+    margin: 15px;
 
     &:visited {
       color: black;
     }
 
     &:hover {
-      color: red;
+      background-color: rgba(226, 135, 67, 0.3);
     }
   }
 

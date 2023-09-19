@@ -122,10 +122,10 @@ const AddProduct = () => {
     <React.Fragment>
       {isLoading && <Loader />}
       <div className="addproduct">
-        <h2 className="addproduct__title">
-          {detectForm(id, "Add New Product", "Edit Product")}
-        </h2>
         <div className="addproduct__container">
+          <h2 className="addproduct__title">
+            {detectForm(id, "Add New Product", "Edit Product")}
+          </h2>
           <form
             onSubmit={detectForm(id, onSubmitProductForm, onEditForm)}
             className="addproduct__form"

@@ -26,42 +26,52 @@ const ProductDetails = () => {
 
   return (
     <div className="details">
-      <div className="details__container">
-        <h2>Details</h2>
-        <div>
-          <Link to="/products">Back to Products</Link>
-        </div>
-        {product === null ? (
-          <Loader />
-        ) : (
-          <div>
-            <div className="details__container-img">
-              <img
-                className="details__img"
-                src={product.imageUrl}
-                alt={product.name}
-              />
-            </div>
-            <div className="details__content">
-              <div className="details__details">
-                <p className="details__price">{product.price}$</p>
-                <h4 className="details__name">{product.name}</h4>
-                <p className="details__name">{product.brand}</p>
-                <p className="details__name">{product.category}</p>
+      {product === null ? (
+        <Loader />
+      ) : (
+        <div className="details__container">
+          <div className="details__link-box">
+            <Link className="details__link" to="/products">
+              &larr; Back to Products
+            </Link>
+          </div>
+          <div className="details__container-img">
+            <img
+              className="details__img"
+              src={product.imageUrl}
+              alt={product.name}
+            />
+            <h4 className="details__name details__name--title">
+              {product.name}
+            </h4>
+          </div>
+          <div className="details__content">
+            <div className="details__details">
+              <div className="details__sub-category">
+                <p className="details__name details__name--brand">
+                  #{product.brand}
+                </p>
+                <p className="details__name details__name--category">
+                  #{product.category}
+                </p>
+                <p className="details__name details__name--price">
+                  €{product.price}
+                </p>
               </div>
               <p className="details__description">{product.description}</p>
-              <div className="details__add">
-                <button
-                  className="details__add"
-                  onClick={() => handleAddToCart(product)}
-                >
-                  ADD TO CART
-                </button>
-              </div>
+            </div>
+
+            <div className="details__add">
+              <button
+                className="details__button"
+                onClick={() => handleAddToCart(product)}
+              >
+                ADD TO CART
+              </button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

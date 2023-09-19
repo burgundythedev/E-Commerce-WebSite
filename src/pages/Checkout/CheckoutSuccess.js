@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-
+import "./CheckoutSuccess.scss";
 const CheckoutSuccess = () => {
   return (
     <div className="success">
-      <h2>Thank you for your purchase</h2>
-      <Link to="/order-history">
-        <button>View Order Status</button>
+      <h2 className="success__title">Thank you for your purchase!</h2>
+      <Link className="success__button-box" to="/order-history">
+        <button className="success__button">View Order Status</button>
       </Link>
     </div>
   );
