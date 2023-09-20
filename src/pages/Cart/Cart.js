@@ -75,7 +75,6 @@ const Cart = () => {
                   <img className="cart__img" src={imageUrl} alt={name} />
                   <div className="cart__description-box">
                     <p className="cart__text">{name}</p>
-
                     <div className="cart__count">
                       <button
                         className="cart__button"

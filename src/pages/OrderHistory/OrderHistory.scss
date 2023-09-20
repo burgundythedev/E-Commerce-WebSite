@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
 
-  min-height: 90vh;
+  min-height: 100%;
 
   flex-direction: column;
   &__table {
@@ -85,7 +85,7 @@
   }
 
   &__background span:nth-child(0) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 24%;
     left: 4%;
     animation-duration: 468s;
@@ -94,7 +94,7 @@
     box-shadow: -100vmin 0 13.352691651496462vmin currentColor;
   }
   &__background span:nth-child(1) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 69%;
     left: 82%;
     animation-duration: 495s;
@@ -103,7 +103,7 @@
     box-shadow: 100vmin 0 13.130829691543925vmin currentColor;
   }
   &__background span:nth-child(2) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 86%;
     left: 36%;
     animation-duration: 19s;
@@ -112,7 +112,7 @@
     box-shadow: 100vmin 0 13.418673906057368vmin currentColor;
   }
   &__background span:nth-child(3) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 34%;
     left: 57%;
     animation-duration: 210s;
@@ -121,7 +121,7 @@
     box-shadow: -100vmin 0 13.1629536625393vmin currentColor;
   }
   &__background span:nth-child(4) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 57%;
     left: 22%;
     animation-duration: 390s;
@@ -130,7 +130,7 @@
     box-shadow: -100vmin 0 12.943667461158999vmin currentColor;
   }
   &__background span:nth-child(5) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 96%;
     left: 21%;
     animation-duration: 411s;
@@ -139,7 +139,7 @@
     box-shadow: 100vmin 0 12.834816549909837vmin currentColor;
   }
   &__background span:nth-child(6) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 54%;
     left: 71%;
     animation-duration: 384s;
@@ -148,7 +148,7 @@
     box-shadow: 100vmin 0 13.09097719643467vmin currentColor;
   }
   &__background span:nth-child(7) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 49%;
     left: 28%;
     animation-duration: 489s;
@@ -157,7 +157,7 @@
     box-shadow: 100vmin 0 12.733488319500731vmin currentColor;
   }
   &__background span:nth-child(8) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 4%;
     left: 69%;
     animation-duration: 384s;
@@ -166,7 +166,7 @@
     box-shadow: -100vmin 0 13.341181003537823vmin currentColor;
   }
   &__background span:nth-child(9) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 85%;
     left: 13%;
     animation-duration: 95s;
@@ -175,7 +175,7 @@
     box-shadow: 100vmin 0 12.95281875363975vmin currentColor;
   }
   &__background span:nth-child(10) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 14%;
     left: 57%;
     animation-duration: 336s;
@@ -184,7 +184,7 @@
     box-shadow: 100vmin 0 13.360977534560785vmin currentColor;
   }
   &__background span:nth-child(11) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 77%;
     left: 37%;
     animation-duration: 140s;
@@ -193,7 +193,7 @@
     box-shadow: 100vmin 0 13.098937848476211vmin currentColor;
   }
   &__background span:nth-child(12) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 62%;
     left: 77%;
     animation-duration: 250s;
@@ -202,7 +202,7 @@
     box-shadow: 100vmin 0 12.729608247759852vmin currentColor;
   }
   &__background span:nth-child(13) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 62%;
     left: 68%;
     animation-duration: 145s;
@@ -211,7 +211,7 @@
     box-shadow: 100vmin 0 12.772535029169315vmin currentColor;
   }
   &__background span:nth-child(14) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 29%;
     left: 28%;
     animation-duration: 44s;
@@ -220,7 +220,7 @@
     box-shadow: -100vmin 0 13.022454179698792vmin currentColor;
   }
   &__background span:nth-child(15) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 78%;
     left: 19%;
     animation-duration: 71s;
@@ -229,7 +229,7 @@
     box-shadow: 100vmin 0 13.39320863060945vmin currentColor;
   }
   &__background span:nth-child(16) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 14%;
     left: 40%;
     animation-duration: 310s;
@@ -238,7 +238,7 @@
     box-shadow: -100vmin 0 13.31110824892818vmin currentColor;
   }
   &__background span:nth-child(17) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 94%;
     left: 24%;
     animation-duration: 14s;
@@ -247,7 +247,7 @@
     box-shadow: 100vmin 0 12.957756867190124vmin currentColor;
   }
   &__background span:nth-child(18) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 96%;
     left: 35%;
     animation-duration: 155s;
@@ -256,12 +256,116 @@
     box-shadow: -100vmin 0 12.6190094636268vmin currentColor;
   }
   &__background span:nth-child(19) {
-    color: #017f94;
+    color: rgb(1, 127, 148, 0.5);
     top: 32%;
     left: 81%;
     animation-duration: 107s;
     animation-delay: -118s;
     transform-origin: -5vw 12vh;
     box-shadow: 100vmin 0 13.149892389388537vmin currentColor;
+  }
+
+  // Width breakpoints
+  $breakpoint-small: 420px;
+  $breakpoint-medium: 768px;
+  $breakpoint-large: 992px;
+  $breakpoint-xlarge: 1200px;
+
+  // Height breakpoints
+  $breakpoint-short: 600px;
+  $breakpoint-medium-height: 920px;
+  $breakpoint-tall: 1200px;
+  /* Small screen (smartphones) */
+  @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+    .history {
+      height: 100%;
+
+      &__table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+        font-size: 10px;
+        margin-top: 20px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      &__thead {
+        display: none;
+      }
+
+      &__tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(226, 135, 65, 0.3);
+        }
+      }
+
+      &__th {
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+      }
+      &__td {
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+
+        &--index {
+          background-color: rgb(226, 135, 65, 0.5);
+        }
+      }
+
+      &__title {
+        font-size: 2rem;
+        margin-top: 80px;
+        font-family: "Josefin Sans", sans-serif;
+        &--details {
+          font-size: 1rem;
+          margin-top: 0;
+          text-align: center;
+          color: #e28741;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  /* Medium screen (tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+    .history {
+      // Add styles for medium screens here
+    }
+  }
+
+  /* Large screen (laptops/desktops) */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+    .history {
+      // Add styles for large screens here
+    }
+  }
+
+  /* Extra-large screen (large desktops) */
+  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+    .history {
+      // Add styles for extra-large screens here
+    }
+  }
+
+  /* Portrait orientation (common for smartphones and some tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+    .history {
+      // Add styles for screens in portrait orientation here
+    }
+  }
+
+  /* Landscape orientation (common for tablets and some laptops/desktops) */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+    .history {
+      // Add styles for screens in landscape orientation here
+    }
   }
 }

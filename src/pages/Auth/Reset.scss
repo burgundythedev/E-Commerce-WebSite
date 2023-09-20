@@ -104,5 +104,79 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+
+/* Extra Small Devices and Short Height Devices */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .reset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(226, 135, 67, 0.1);
+    &__img {
+      width: 100px;
+      animation: slide-down 0.5s ease;
+    }
+
+    &__form-box {
+      height: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 17rem;
+      padding: 30px;
+    }
+    &__title {
+      text-align: center;
+      margin: 10px 0px 10px 0px;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 35px;
+    }
+
+    &__placeholder {
+      padding: 1rem;
+      width: 15rem;
+      border: 1px solid #c0c0c0;
+      border-radius: 10px;
+    }
+
+    &__button {
+      width: 17rem;
+    }
+  }
+}
+
+/* Small Devices */
+@media screen and (max-width: #{$breakpoint-medium}) {
+  .reset {
+    // Your BEM styles for the .reset block on small devices
+  }
+}
+
+/* Medium Devices and Medium Height Devices */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
+  .reset {
+    // Your BEM styles for the .reset block on medium and medium height devices
+  }
+}
+
+/* Large Devices and Tall Height Devices */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+  .reset {
+    // Your BEM styles for the .reset block on large and tall height devices
+  }
+}
+
+/* Extra Large Devices */
+@media screen and (min-width: #{$breakpoint-xlarge + 1}) {
+  .reset {
+    // Your BEM styles for the .reset block on extra large devices
+  }
 }

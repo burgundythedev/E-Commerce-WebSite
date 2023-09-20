@@ -93,146 +93,148 @@ const Header = () => {
             <h4 className="header__title">villabulle</h4>
             <img className="header__bubbles" src={bubbles} alt="bubble-img" />
           </Link>
-          <div className="header__home">
-            <AdminOnlyLink>
-              <li className="header__item">
-                <Link to="/admin/home" className="header__links">
-                  {screenWidth < 1000 ? (
-                    <img
-                      className="header__login-logo login-logo--admin"
-                      src={adminUser}
-                      alt="Admin"
-                    />
-                  ) : (
-                    <span className="header__span-admin">Admin</span>
-                  )}
-                </Link>
-              </li>
-            </AdminOnlyLink>
-            <li className="header__item">
-              <NavLink
-                to="/"
-                className="header__links"
-                activeclassname="active"
-              >
-                {screenWidth < 1000 ? (
-                  <img className="header__login-logo" src={home} alt="Home" />
-                ) : (
-                  <span className="header__text">Home</span>
-                )}
-              </NavLink>
-            </li>
-            <HideLogin>
+          <div className="header__list-container">
+            <div className="header__home">
+              <AdminOnlyLink>
+                <li className="header__item">
+                  <Link to="/admin/home" className="header__links">
+                    {screenWidth < 1000 ? (
+                      <img
+                        className="header__login-logo login-logo--admin"
+                        src={adminUser}
+                        alt="Admin"
+                      />
+                    ) : (
+                      <span className="header__span-admin">Admin</span>
+                    )}
+                  </Link>
+                </li>
+              </AdminOnlyLink>
               <li className="header__item">
                 <NavLink
-                  to="/register"
+                  to="/"
+                  className="header__links"
+                  activeclassname="active"
+                >
+                  {screenWidth < 1000 ? (
+                    <img className="header__login-logo" src={home} alt="Home" />
+                  ) : (
+                    <span className="header__text">Home</span>
+                  )}
+                </NavLink>
+              </li>
+              <HideLogin>
+                <li className="header__item">
+                  <NavLink
+                    to="/register"
+                    className="header__links"
+                    activeclassname="active"
+                  >
+                    {screenWidth < 1000 ? (
+                      <img
+                        className="header__login-logo"
+                        src={register}
+                        alt="Register"
+                      />
+                    ) : (
+                      <span className="header__text">Register</span>
+                    )}
+                  </NavLink>
+                </li>
+              </HideLogin>
+              <li className="header__item">
+                <NavLink
+                  to="/contact"
                   className="header__links"
                   activeclassname="active"
                 >
                   {screenWidth < 1000 ? (
                     <img
                       className="header__login-logo"
-                      src={register}
-                      alt="Register"
+                      src={contact}
+                      alt="Contact"
                     />
                   ) : (
-                    <span className="header__text">Register</span>
+                    <span className="header__text">Contact</span>
                   )}
                 </NavLink>
               </li>
-            </HideLogin>
-            <li className="header__item">
-              <NavLink
-                to="/contact"
-                className="header__links"
-                activeclassname="active"
-              >
-                {screenWidth < 1000 ? (
-                  <img
-                    className="header__login-logo"
-                    src={contact}
-                    alt="Contact"
-                  />
-                ) : (
-                  <span className="header__text">Contact</span>
-                )}
-              </NavLink>
-            </li>
-          </div>
-          <div className="header__ulist">
-            <div className="header__user-container">
-              <div className="header__auth">
-                <HideLogin>
-                  <li className="header__item">
-                    <NavLink
-                      to="/login"
-                      activeclassname="active"
-                      className="header__links"
-                    >
-                      <img
-                        className="header__login-logo"
-                        src={loginIcon}
-                        alt="Login"
-                      />
-                    </NavLink>
-                  </li>
-                </HideLogin>
-                <ShowLogin>
-                  <NavLink
-                    to="/order-history"
-                    activeclassname="active"
-                    className="header__links"
-                  >
-                    <p className="header__userName">Hi, {displayName}</p>
-                  </NavLink>
-
-                  <li className="header__item">
+            </div>
+            <div className="header__ulist">
+              <div className="header__user-container">
+                <div className="header__auth">
+                  <HideLogin>
+                    <li className="header__item">
+                      <NavLink
+                        to="/login"
+                        activeclassname="active"
+                        className="header__links"
+                      >
+                        <img
+                          className="header__login-logo"
+                          src={loginIcon}
+                          alt="Login"
+                        />
+                      </NavLink>
+                    </li>
+                  </HideLogin>
+                  <ShowLogin>
                     <NavLink
                       to="/order-history"
                       activeclassname="active"
                       className="header__links"
                     >
-                      {screenWidth < 1000 ? (
-                        <img
-                          className="header__login-logo"
-                          src={myOrders}
-                          alt="My Orders"
-                        />
-                      ) : (
-                        <span className="header__text">My Orders</span>
-                      )}
+                      <p className="header__userName">Hi, {displayName}</p>
                     </NavLink>
-                  </li>
-                  <li className="header__item">
-                    <NavLink
-                      to="/"
-                      className="header__logout"
-                      onClick={onLogOut}
-                      activeclassname="active"
-                    >
-                      {screenWidth < 1000 ? (
-                        <img
-                          className="header__login-logo"
-                          src={logOut}
-                          alt="Logout"
-                        />
-                      ) : (
-                        <span className="header__text">Log out</span>
-                      )}
-                    </NavLink>
-                  </li>
-                </ShowLogin>
+
+                    <li className="header__item">
+                      <NavLink
+                        to="/order-history"
+                        activeclassname="active"
+                        className="header__links"
+                      >
+                        {screenWidth < 1000 ? (
+                          <img
+                            className="header__login-logo"
+                            src={myOrders}
+                            alt="My Orders"
+                          />
+                        ) : (
+                          <span className="header__text">My Orders</span>
+                        )}
+                      </NavLink>
+                    </li>
+                    <li className="header__item">
+                      <NavLink
+                        to="/"
+                        className="header__logout"
+                        onClick={onLogOut}
+                        activeclassname="active"
+                      >
+                        {screenWidth < 1000 ? (
+                          <img
+                            className="header__login-logo"
+                            src={logOut}
+                            alt="Logout"
+                          />
+                        ) : (
+                          <span className="header__text">Log out</span>
+                        )}
+                      </NavLink>
+                    </li>
+                  </ShowLogin>
+                </div>
+                <div className="header__cart">
+                  <NavLink to="/cart" className="header__link-cart">
+                    <img
+                      src={cartLogo}
+                      alt="cartlogo"
+                      className="header__cart-logo"
+                    />
+                  </NavLink>
+                  <p className="header__text">{cartQuantity}</p>
+                </div>
               </div>
-              <span className="header__cart">
-                <NavLink to="/cart" className="header__link-cart">
-                  <img
-                    src={cartLogo}
-                    alt="cartlogo"
-                    className="header__cart-logo"
-                  />
-                </NavLink>
-                <p className="header__text">{cartQuantity}</p>
-              </span>
             </div>
           </div>
         </nav>

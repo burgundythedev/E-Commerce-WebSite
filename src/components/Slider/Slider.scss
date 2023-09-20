@@ -300,32 +300,20 @@
   pointer-events: none;
 }
 
-@media screen and (min-width: 600px) {
-  .slide img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .slide img {
+  width: 100%;
   height: 100%;
 }
 
 .content {
   position: absolute;
   text-align: center;
-  top: 20rem;
+  top: 35rem;
   left: 7%;
   opacity: 0;
   padding: 3rem;
   display: flex;
   flex-direction: column;
-}
-
-@media screen and (max-width: 600px) {
-  .content {
-    width: 80%;
-  }
 }
 
 .text-box {
@@ -394,7 +382,81 @@ hr {
   text-decoration: none;
   font-size: 20px;
 }
-.button-box{
+.button-box {
   display: flex;
   justify-content: flex-start;
+}
+
+// Width breakpoints
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+// Height breakpoints
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+
+/* Small screen (smartphones) */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .slider{
+    border-radius: 20px;
+  }
+  
+  
+  .content {
+    top: 25rem;
+    left: 0%;
+    flex-direction: column;
+  }
+
+  .text-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text {
+    font-size: 20px;
+    margin-left: 0px;
+  }
+  .title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0;
+  }
+  .slide img {
+    width: fit-content;
+    height: 100%;
+  }
+
+  .arrow {
+    background-color: rgba(81, 154, 196, 0.6);
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .button-box {
+    justify-content: center;
+  }
+}
+
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+}
+
+/* Large screen (laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+}
+
+/* Extra-large screen (large desktops) */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+}
+
+/* Portrait orientation (common for smartphones and some tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+}
+
+/* Landscape orientation (common for tablets and some laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
 }

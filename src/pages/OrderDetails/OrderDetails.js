@@ -77,8 +77,8 @@ const OrderDetails = () => {
 
                 return (
                   <tr className="order-d__tr" key={index}>
-                    <td className="order-d__td">
-                      <b>{index + 1}</b>
+                    <td className="order-d__td order-d__td--index">
+                      {index + 1}
                     </td>
                     <td className="order-d__td">
                       <p>

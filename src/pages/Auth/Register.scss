@@ -342,3 +342,72 @@
     box-shadow: 100vmin 0 13.149892389388537vmin currentColor;
   }
 }
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+
+/* Extra Small Devices and Short Height Devices */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .register {
+    &__form-box {
+      width: 30rem;
+      height: 30rem;
+      margin-right: 30px;
+      margin-left: 30px;
+      background-color: rgb(226, 135, 67, 0.3);
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__form {
+      font-size: 1.6rem;
+      outline: none;
+    }
+ 
+    &__placeholder {
+      padding: 1rem;
+      width: 15rem;
+      border: 1px solid #c0c0c0;
+      border-radius: 10px;
+    }
+
+    &__button {
+      background-color: rgb(159, 207, 227, 0.7);
+  
+    }
+
+
+  }
+}
+
+/* Small Devices */
+@media screen and (max-width: #{$breakpoint-medium}) {
+  .register {
+    // Your BEM styles for the .register block on small devices
+  }
+}
+
+/* Medium Devices and Medium Height Devices */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
+  .register {
+    // Your BEM styles for the .register block on medium and medium height devices
+  }
+}
+
+/* Large Devices and Tall Height Devices */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+  .register {
+    // Your BEM styles for the .register block on large and tall height devices
+  }
+}
+
+/* Extra Large Devices */
+@media screen and (min-width: #{$breakpoint-xlarge + 1}) {
+  .register {
+    // Your BEM styles for the .register block on extra large devices
+  }
+}

@@ -1,12 +1,26 @@
 .footer {
-  height: 1rem;
-  padding: 10px;
+  text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1); 
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
   &__text {
     font-size: 15px;
     font-family: "Josefin Sans", sans-serif;
+  }
+  // Width breakpoints
+  $breakpoint-small: 420px;
+  $breakpoint-medium: 768px;
+  $breakpoint-large: 992px;
+  $breakpoint-xlarge: 1200px;
+
+  // Height breakpoints
+  $breakpoint-short: 600px;
+  $breakpoint-medium-height: 920px;
+  $breakpoint-tall: 1200px;
+  @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+    &__text {
+      font-size: 10px;
+    }
   }
 }

@@ -1,18 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Phudu&display=swap");
 
 .header {
+  
   height: 3rem;
   padding: 10px;
-  background-color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   @keyframes move {
     100% {
       transform: translate3d(0, 0, 1px) rotate(360deg);
     }
   }
+  &__list-container {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
+ 
+  }
   &__title-box {
     display: flex;
     justify-content: center;
@@ -110,7 +117,7 @@
     display: flex;
     flex-direction: row;
   }
-  &__cart { 
+  &__cart {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -144,16 +151,111 @@
     border-radius: 10px;
   }
 
-  @media (max-width: 1000px) {
-    .header {
-      flex-direction: column;
-    }
-    .header__links.hide-text {
-      text-indent: -9999px;
-    }
+  // Width breakpoints
+  $breakpoint-small: 420px;
+  $breakpoint-medium: 768px;
+  $breakpoint-large: 992px;
+  $breakpoint-xlarge: 1200px;
 
-    .header__links.hide-text img {
-      display: block;
+  // Height breakpoints
+  $breakpoint-short: 600px;
+  $breakpoint-medium-height: 920px;
+  $breakpoint-tall: 1200px;
+
+  /* Small screen (smartphones) */
+  @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+    .header {
+  
+      &__title-box {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        align-items: center;
+        &:visited {
+          color: black;
+        }
+      }
+      &__bubbles {
+        margin-left: 5px;
+      }
+      &__title {
+        font-size: 15px;
+      }
+
+      &__list-container {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+  
+        justify-content: space-evenly;
+      }
+
+      &__item {
+        list-style-type: none;
+        font-family: "Josefin Sans", sans-serif;
+        padding: 0;
+        margin-right: 10px;
+      }
+
+      &__links {
+        &:hover {
+          border-bottom: 1px solid black;
+        }
+      }
+
+      &__userName {
+        display: none;
+      }
+
+      &__login-logo {
+        width: 20px;
+        height: 20px;
+      }
+      &__cart-logo {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+      }
+      &__text {
+        font-size: 15px;
+        padding: 0px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+    }
+  }
+
+  /* Medium screen (tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+    .header {
+      // Add styles for medium screens here
+    }
+  }
+
+  /* Large screen (laptops/desktops) */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+    .header {
+      // Add styles for large screens here
+    }
+  }
+
+  /* Extra-large screen (large desktops) */
+  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+    .header {
+      // Add styles for extra-large screens here
+    }
+  }
+
+  /* Portrait orientation (common for smartphones and some tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+    .header {
+      // Add styles for screens in portrait orientation here
+    }
+  }
+
+  /* Landscape orientation (common for tablets and some laptops/desktops) */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+    .header {
+      // Add styles for screens in landscape orientation here
     }
   }
 }

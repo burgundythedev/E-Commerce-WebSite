@@ -22,14 +22,17 @@
     margin-top: 80px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(226, 135, 67, 0.5);
   }
   &__link {
     text-decoration: none;
     list-style-type: none;
     cursor: pointer;
-    color: rgb(226, 135, 67, 1);
+
     &:visited {
-      color: rgb(226, 135, 67, 1);
+      color: black;
     }
   }
 
@@ -287,5 +290,112 @@
     animation-delay: -118s;
     transform-origin: -5vw 12vh;
     box-shadow: 100vmin 0 13.149892389388537vmin currentColor;
+  }
+}
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+// Height breakpoints
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+/* Small screen (smartphones) */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .order-d {
+    height: 100%;
+    &__back-link {
+      font-size: 15px;
+    }
+    &__text {
+      color: black;
+      font-size: 15px;
+    }
+    &__bold {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 15px;
+    }
+    &__table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      font-size: 15px;
+      margin-top: 100px;
+    }
+
+    &__thead {
+      display: none;
+    }
+
+    &__tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+    }
+
+    &__th {
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+    }
+    &__td {
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.5);
+      }
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+  .order-d {
+    // Add styles for medium screens here
+  }
+}
+
+/* Large screen (laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  .order-d {
+    // Add styles for large screens here
+  }
+}
+
+/* Extra-large screen (large desktops) */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+  .order-d {
+    // Add styles for extra-large screens here
+  }
+}
+
+/* Portrait orientation (common for smartphones and some tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+  .order-d {
+    // Add styles for screens in portrait orientation here
+  }
+}
+
+/* Landscape orientation (common for tablets and some laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  .order-d {
+    // Add styles for screens in landscape orientation here
   }
 }

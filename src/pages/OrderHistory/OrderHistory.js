@@ -77,7 +77,9 @@ const OrderHistory = () => {
                       key={id}
                       onClick={() => handleOrderDetails(id, orderStatus)}
                     >
-                      <td className="history__td">{index + 1}</td>
+                      <td className="history__td history__td--index">
+                        {index + 1}
+                      </td>
                       <td className="history__td">{orderDate}</td>
                       <td className="history__td">{id}</td>
                       <td className="history__td">

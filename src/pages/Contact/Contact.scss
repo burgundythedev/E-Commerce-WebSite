@@ -328,4 +328,108 @@
     transform-origin: -5vw 12vh;
     box-shadow: 100vmin 0 13.149892389388537vmin currentColor;
   }
+
+  // Width breakpoints
+  $breakpoint-small: 420px;
+  $breakpoint-medium: 768px;
+  $breakpoint-large: 992px;
+  $breakpoint-xlarge: 1200px;
+
+  // Height breakpoints
+  $breakpoint-short: 600px;
+  $breakpoint-medium-height: 920px;
+  $breakpoint-tall: 1200px;
+  /* Small screen (smartphones) */
+  @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+    .contact-form {
+      &__background span {
+        width: 1vmin;
+        height: 1vmin;
+        border-radius: 1vmin;
+      }
+      &__title {
+        font-size: 40px;
+        margin-top: 100px;
+      }
+      &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__form {
+        align-items: center;
+        width: 100%;
+      }
+      &__input {
+        font-size: 10px;
+      }
+      &__details {
+        width: 300px;
+        height: 300px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__details-contacts {
+        justify-content: center;
+        width: 100%;
+      }
+      &__label {
+        font-size: 15px;
+      }
+      &__details-title {
+        font-size: 17px;
+        text-align: center;
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      &__details-text {
+        font-size: 10px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+      &__img {
+        width: 25px;
+        height: 25px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  /* Medium screen (tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+    .contact-form {
+      // Add styles for medium screens here
+    }
+  }
+
+  /* Large screen (laptops/desktops) */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+    .contact-form {
+      // Add styles for large screens here
+    }
+  }
+
+  /* Extra-large screen (large desktops) */
+  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+    .contact-form {
+      // Add styles for extra-large screens here
+    }
+  }
+
+  /* Portrait orientation (common for smartphones and some tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+    .contact-form {
+      // Add styles for screens in portrait orientation here
+    }
+  }
+
+  /* Landscape orientation (common for tablets and some laptops/desktops) */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+    .contact-form {
+      // Add styles for screens in landscape orientation here
+    }
+  }
 }

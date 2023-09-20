@@ -134,11 +134,11 @@ const Contact = () => {
           </p>
           <span className="contact-form__details-contacts">
             <img className="contact-form__img" src={phone} alt="icon-contact" />
-            <p>+33 172586789</p>
+            <p className="contact-form__details-text">+33 172586789</p>
           </span>
           <span className="contact-form__details-contacts">
             <img className="contact-form__img" src={mail} alt="icon-contact" />
-            <p>support@eshop.com</p>
+            <p className="contact-form__details-text">support@eshop.com</p>
           </span>
           <span className="contact-form__details-contacts">
             <img
@@ -146,7 +146,7 @@ const Contact = () => {
               src={location}
               alt="icon-contact"
             />
-            <p>Paris, France</p>
+            <p className="contact-form__details-text">Paris, France</p>
           </span>
           <span className="contact-form__details-contacts">
             <img
@@ -154,7 +154,7 @@ const Contact = () => {
               src={github}
               alt="icon-contact"
             />
-            <p>@burgundythedev</p>
+            <p className="contact-form__details-text">@burgundythedev</p>
           </span>
         </div>
       </div>

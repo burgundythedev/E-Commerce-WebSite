@@ -6,6 +6,7 @@
   &__title {
     text-align: start;
     font-size: 20px;
+
   }
   &__list {
     margin: 0;
@@ -26,6 +27,7 @@
     width: 100px;
     text-align: center;
     cursor: pointer;
+    color: white;
     &--active {
       background-color: rgba(1, 127, 148, 0.2);
       box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
