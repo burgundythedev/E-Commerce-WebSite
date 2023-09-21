@@ -1,5 +1,4 @@
 .status {
-
   &__select {
     width: 170px;
     padding: 2px;
@@ -29,5 +28,89 @@
       box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
         rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
     }
+  }
+}
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+/* Small screen (smartphones) */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .status {
+
+    &__form{
+      display: flex;
+      flex-direction: row;
+   
+    }
+    &__select {
+      width: 170px;
+      padding: 2px;
+      border: 1px solid rgba(226, 135, 67, 0.5);
+      border-radius: 10px;
+      font-size: 15px;
+      border-color: rgba(159, 207, 227, 1);
+  
+      &:focus {
+        border-color: rgba(159, 207, 227, 1);
+      }
+    }
+    &__button {
+      background-color: rgba(226, 135, 67, 0.3);
+      border-radius: 50px;
+      border-width: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 10px;
+      height: 30px;
+      padding: 0 25px;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      margin-left: 15px;
+  
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+          rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+      }
+    }
+  }
+}
+
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+  .status {
+    // Add styles for medium screens here
+  }
+}
+
+/* Large screen (laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  .status {
+    // Add styles for large screens here
+  }
+}
+
+/* Extra-large screen (large desktops) */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+  .status {
+    // Add styles for extra-large screens here
+  }
+}
+
+/* Portrait orientation (common for smartphones and some tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+  .status {
+    // Add styles for screens in portrait orientation here
+  }
+}
+
+/* Landscape orientation (common for tablets and some laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  .status {
+    // Add styles for screens in landscape orientation here
   }
 }

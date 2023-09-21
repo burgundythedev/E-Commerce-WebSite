@@ -13,13 +13,11 @@
   &__name {
     font-size: 15px;
     text-align: center;
-    
   }
 
-  &__list{
+  &__list {
     margin: 0;
     padding: 0;
-   
   }
   &__link {
     display: block;
@@ -30,7 +28,64 @@
       color: black;
     }
 
-    
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background-color: rgb(226, 135, 67, 0.8);
+    }
+  }
+  &__item {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    position: relative;
+    list-style-type: none;
+    font-size: 20px;
+
+    &:hover {
+      background-color: rgb(226, 135, 67, 0.5);
+    }
+
+    &:active {
+      color: black;
+    }
+  }
+}
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+/* Small screen (smartphones) */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .navbar {
+    width: 100%;
+
+
+    &__name {
+      font-size: 15px;
+      margin-top: 50px;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+    }
+    &__link {
+      
+      width: 100%;
+      text-decoration: none;
+      cursor: pointer;
+      &:visited {
+        color: black;
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -40,22 +95,58 @@
         height: 100%;
         background-color: rgb(226, 135, 67, 0.8);
       }
-  }
-  &__item {
-    border-bottom: 1px solid #ccc;
-    padding: 1rem;
-    position: relative;
-    list-style-type: none;
-    font-size: 20px;
-   
-    &:hover{
-      background-color:rgb(226, 135, 67, 0.5);
     }
-  
-    &:active {
-      color: black;
+    &__item {
+      border-bottom: 1px solid #ccc;
+      padding: 1rem;
+      position: relative;
+      list-style-type: none;
+      font-size: 20px;
+      
+     
+
+      &:hover {
+        background-color: rgb(226, 135, 67, 0.5);
+      }
+
+      &:active {
+        color: black;
+      }
     }
   }
+}
 
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+  .navbar {
+    // Add styles for medium screens here
+  }
+}
 
+/* Large screen (laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  .navbar {
+    // Add styles for large screens here
+  }
+}
+
+/* Extra-large screen (large desktops) */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+  .navbar {
+    // Add styles for extra-large screens here
+  }
+}
+
+/* Portrait orientation (common for smartphones and some tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+  .navbar {
+    // Add styles for screens in portrait orientation here
+  }
+}
+
+/* Landscape orientation (common for tablets and some laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  .navbar {
+    // Add styles for screens in landscape orientation here
+  }
 }

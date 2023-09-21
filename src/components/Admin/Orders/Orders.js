@@ -56,7 +56,9 @@ const Orders = () => {
                       key={id}
                       onClick={() => handleOrderDetails(id)}
                     >
-                      <td className="orders__td">{index + 1}</td>
+                      <td className="orders__td orders__td--index">
+                        {index + 1}
+                      </td>
                       <td className="orders__td">{orderDate}</td>
                       <td className="orders__td">{id}</td>
                       <td className="orders__td">
