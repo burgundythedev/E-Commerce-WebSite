@@ -38,12 +38,74 @@
   }
   &__li--active {
     font-size: 4rem;
-    color: rgba(226, 135, 65, 0.5)
+    color: rgba(226, 135, 65, 0.5);
   }
   &__p {
     margin-left: 1rem;
   }
   &__total-box {
     margin-left: 50px;
+  }
+}
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+/* Extra Small Devices and Short Height Devices */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .pagination {
+    &__arrow-next {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    &__arrow-prev {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    &__li {
+      font-size: 1rem;
+   
+    }
+    &__li--active {
+      font-size: 2rem;
+      color: rgba(226, 135, 65, 0.5);
+    }
+    &__p {
+      margin-left: 1rem;
+    }
+    &__total-box {
+      display: none;
+    }
+  }
+
+  /* Small Devices */
+  @media screen and (max-width: #{$breakpoint-medium}) {
+    .pagination {
+      // Your BEM styles for the .pagination block on small devices
+    }
+  }
+
+  /* Medium Devices and Medium Height Devices */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
+    .pagination {
+      // Your BEM styles for the .pagination block on medium and medium height devices
+    }
+  }
+
+  /* Large Devices and Tall Height Devices */
+  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+    .pagination {
+      // Your BEM styles for the .pagination block on large and tall height devices
+    }
+  }
+
+  /* Extra Large Devices */
+  @media screen and (min-width: #{$breakpoint-xlarge + 1}) {
+    .pagination {
+      // Your BEM styles for the .pagination block on extra large devices
+    }
   }
 }

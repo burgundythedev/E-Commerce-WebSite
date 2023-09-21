@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Phudu&display=swap");
 
 .header {
-  
-  height: 3rem;
+  height: 4rem;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -17,8 +16,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
- 
   }
   &__title-box {
     display: flex;
@@ -109,7 +106,7 @@
   &__userName {
     font-family: "Josefin Sans", sans-serif;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 15px;
     color: #9fcfe3;
   }
 
@@ -139,13 +136,13 @@
     padding: 20px;
   }
   &__text {
-    font-size: 15px;
+    font-size: 18px;
     padding: 10px;
     font-family: "Josefin Sans", sans-serif;
   }
 
   &__span-admin {
-    font-size: 12px;
+    font-size: 20px;
     padding: 10px;
     background-color: rgb(159, 207, 227, 0.3);
     border-radius: 10px;
@@ -165,7 +162,6 @@
   /* Small screen (smartphones) */
   @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
     .header {
-  
       &__title-box {
         display: flex;
         justify-content: center;
@@ -186,7 +182,7 @@
         display: flex;
         flex-direction: row;
         width: 60%;
-  
+
         justify-content: space-evenly;
       }
 

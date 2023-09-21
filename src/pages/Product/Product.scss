@@ -13,10 +13,8 @@ $breakpoint-tall: 1200px;
   margin-left: 200px;
   margin-right: 200px;
   min-height: 90vh;
-  &__content {
-    width: 100%;
-    padding-left: 5px;
-  }
+  display: flex;
+  justify-content: center;
   &__icon {
     display: none;
     justify-content: center;
@@ -235,30 +233,59 @@ $breakpoint-tall: 1200px;
     transform-origin: -5vw 12vh;
     box-shadow: 100vmin 0 13.149892389388537vmin currentColor;
   }
-
-
-  @media screen and (min-width: $breakpoint-medium) {
-    // Styles for medium width screens and up
+}
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+/* Extra Small Devices and Short Height Devices */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .shop {
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__icon {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+    }
   }
 
-  @media screen and (min-width: $breakpoint-large) {
-    // Styles for large width screens and up
+  /* Small Devices */
+  @media screen and (max-width: #{$breakpoint-medium}) {
+    .shop {
+      // Your BEM styles for the .shop block on small devices
+    }
   }
 
-  @media screen and (min-width: $breakpoint-xlarge) {
-    // Styles for extra-large width screens and up
+  /* Medium Devices and Medium Height Devices */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
+    .shop {
+      // Your BEM styles for the .shop block on medium and medium height devices
+    }
   }
 
-  // Height media queries
-  @media screen and (min-height: $breakpoint-short) {
-    // Styles for short height screens and up
+  /* Large Devices and Tall Height Devices */
+  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+    .shop {
+      // Your BEM styles for the .shop block on large and tall height devices
+    }
   }
 
-  @media screen and (min-height: $breakpoint-medium-height) {
-    // Styles for medium-height screens and up
-  }
-
-  @media screen and (min-height: $breakpoint-tall) {
-    // Styles for tall height screens and up
+  /* Extra Large Devices */
+  @media screen and (min-width: #{$breakpoint-xlarge + 1}) {
+    .shop {
+      // Your BEM styles for the .shop block on extra large devices
+    }
   }
 }

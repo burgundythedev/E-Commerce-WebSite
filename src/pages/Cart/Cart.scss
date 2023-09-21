@@ -69,17 +69,17 @@ $breakpoint-tall: 1200px;
   }
   &__continue {
     margin-bottom: 25px;
+    padding: 15px;
     text-decoration: none;
     list-style-type: none;
     cursor: pointer;
-    font-size: 25px;
-    color: rgb(226, 135, 67, 1);
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(226, 135, 67, 0.5);
     &:visited {
       color: black;
     }
-    &:hover {
-      color: rgb(226, 135, 67, 1);
-    }
+
   }
   &__button {
     border: 1px solid grey;
@@ -168,7 +168,7 @@ $breakpoint-tall: 1200px;
     color: rgb(226, 135, 67, 0.7);
   }
 }
-// Media queries with BEM styles
+
 
 /* Extra Small Devices and Short Height Devices */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {

@@ -1,5 +1,5 @@
 .product-list {
-  width: 100%;
+  
   font-family: "Josefin Sans", sans-serif;
 
   &__top {
@@ -28,19 +28,75 @@
     padding: 8px;
     width: 200px;
   }
+}
 
-  @media screen and (max-width: 800px) {
+
+
+$breakpoint-small: 420px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-tall: 1200px;
+/* Extra Small Devices and Short Height Devices */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .product-list {
+   
     &__top {
-      flex-direction: column;
-      align-items: start;
-      padding-bottom: 5px;
+      display: none;
     }
+
+    &__label {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 0 5px;
+    }
+
+    &__select {
+      font-size: 1rem;
+      border: none;
+      border-bottom: 1px solid rgb(159, 207, 227, 0.5);
+      border-radius: 15px;
+      outline: none;
+      font-family: "Josefin Sans", sans-serif;
+      padding: 8px;
+      width: 200px;
+    }
+
+    &__item{
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+
+}
+
+/* Small Devices */
+@media screen and (max-width: #{$breakpoint-medium}) {
+  .product-list {
+    // Your BEM styles for the .product-list block on small devices
   }
 }
 
-.grid {
-  margin: 100px 0px 100px 0px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px;
+/* Medium Devices and Medium Height Devices */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
+  .product-list {
+    // Your BEM styles for the .product-list block on medium and medium height devices
+  }
+}
+
+/* Large Devices and Tall Height Devices */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+  .product-list {
+    // Your BEM styles for the .product-list block on large and tall height devices
+  }
+}
+
+/* Extra Large Devices */
+@media screen and (min-width: #{$breakpoint-xlarge + 1}) {
+  .product-list {
+    // Your BEM styles for the .product-list block on extra large devices
+  }
 }
