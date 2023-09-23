@@ -98,7 +98,7 @@ const Header = () => {
               <AdminOnlyLink>
                 <li className="header__item">
                   <Link to="/admin/home" className="header__links">
-                    {screenWidth < 1000 ? (
+                    {screenWidth < 1060 ? (
                       <img
                         className="header__login-logo login-logo--admin"
                         src={adminUser}
@@ -116,7 +116,7 @@ const Header = () => {
                   className="header__links"
                   activeclassname="active"
                 >
-                  {screenWidth < 1000 ? (
+                  {screenWidth < 1060 ? (
                     <img className="header__login-logo" src={home} alt="Home" />
                   ) : (
                     <span className="header__text">Home</span>
@@ -130,7 +130,7 @@ const Header = () => {
                     className="header__links"
                     activeclassname="active"
                   >
-                    {screenWidth < 1000 ? (
+                    {screenWidth < 1060 ? (
                       <img
                         className="header__login-logo"
                         src={register}
@@ -148,7 +148,7 @@ const Header = () => {
                   className="header__links"
                   activeclassname="active"
                 >
-                  {screenWidth < 1000 ? (
+                  {screenWidth < 1060 ? (
                     <img
                       className="header__login-logo"
                       src={contact}
@@ -193,7 +193,7 @@ const Header = () => {
                         activeclassname="active"
                         className="header__links"
                       >
-                        {screenWidth < 1000 ? (
+                        {screenWidth < 1060 ? (
                           <img
                             className="header__login-logo"
                             src={myOrders}
@@ -211,7 +211,7 @@ const Header = () => {
                         onClick={onLogOut}
                         activeclassname="active"
                       >
-                        {screenWidth < 1000 ? (
+                        {screenWidth < 1060 ? (
                           <img
                             className="header__login-logo"
                             src={logOut}

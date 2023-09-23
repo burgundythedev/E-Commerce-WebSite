@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBarAdmin.scss";
 import { useSelector } from "react-redux";
 import { selectEmail } from "../../../store/slice/authSlice";
-import userLogo from "../../../assets/img/user-icon.png";
+import userLogo from "../../../assets/img/admin.png";
 import { NavLink } from "react-router-dom";
 const NavBarAdmin = () => {
   const userEmail = useSelector(selectEmail);
