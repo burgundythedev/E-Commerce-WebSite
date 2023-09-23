@@ -1,6 +1,9 @@
 .item {
-  display: flex;
-  align-items: center;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   max-width: 1200px;
   border-radius: 29% 71% 18% 82% / 51% 51% 49% 49%;
   background-color: rgba(1, 127, 148, 0.1);
@@ -100,19 +103,43 @@
     }
   }
 }
+// Width breakpoints
 $breakpoint-small: 420px;
-$breakpoint-medium: 768px;
+$breakpoint-medium: 820px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
+
+// Height breakpoints
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
 /* Extra Small Devices and Short Height Devices */
+
+/* Medium Devices and Medium Height Devices */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .item {
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+      width: 250px;
+      height: 250px;
+    }
+    &__content {
+      width: 500px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .item {
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    width: 100%;
     border-radius: 29% 71% 18% 82% / 51% 51% 49% 49%;
     background-color: rgba(1, 127, 148, 0.1);
     margin-top: 100px;
@@ -180,13 +207,6 @@ $breakpoint-tall: 1200px;
         box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
           rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
       }
-    }
-  }
-
-  /* Small Devices */
-  @media screen and (max-width: #{$breakpoint-medium}) {
-    .item {
-      // Your BEM styles for the .item block on small devices
     }
   }
 

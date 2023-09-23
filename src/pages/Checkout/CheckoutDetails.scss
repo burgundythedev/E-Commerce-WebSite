@@ -79,14 +79,88 @@
     }
   }
 }
+// Width breakpoints
 $breakpoint-small: 420px;
-$breakpoint-medium: 768px;
+$breakpoint-medium: 820px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
 
+// Height breakpoints
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
+
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .checkout-d {
+    &__checkout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    &__title {
+      font-size: 25px;
+    }
+    &__ship {
+      align-items: center;
+      width: 500px;
+      box-shadow: none;
+      margin-bottom: 50px;
+    }
+
+    &__label {
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-family: "Josefin Sans", sans-serif;
+    }
+    &__bill {
+      align-items: center;
+      width: 500px;
+      box-shadow: none;
+      margin-bottom: 50px;
+    }
+
+    &__input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 1rem;
+      width: 10rem;
+      border: 1px solid #c0c0c0;
+      border-radius: 10px;
+    }
+
+    &__button-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    &__button {
+      background-color: rgb(159, 207, 227, 0.5);
+      border-radius: 50px;
+      border-width: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 17px;
+      height: 44px;
+      line-height: 1.15;
+      margin: 12px 0 0;
+      padding: 0 25px;
+      position: relative;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      width: 20rem;
+
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+          rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+        background-color: rgb(159, 207, 227, 0.7);
+      }
+    }    }
+}
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .checkout-d {
@@ -96,9 +170,9 @@ $breakpoint-tall: 1200px;
       align-items: center;
       margin-top: 50px;
     }
-&__title{
-  font-size: 25px;
-}
+    &__title {
+      font-size: 25px;
+    }
     &__ship {
       align-items: center;
       width: 300px;
@@ -158,12 +232,7 @@ $breakpoint-tall: 1200px;
     }
   }
 
-  /* Medium screen (tablets) */
-  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
-    .checkout-d {
-      // Add styles for medium screens here
-    }
-  }
+  
 
   /* Large screen (laptops/desktops) */
   @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {

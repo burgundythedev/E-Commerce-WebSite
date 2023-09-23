@@ -80,19 +80,100 @@
     border: 1px solid black;
   }
 }
+// Width breakpoints
 $breakpoint-small: 420px;
-$breakpoint-medium: 768px;
+$breakpoint-medium: 820px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
 
+// Height breakpoints
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .orders-details {
+    margin-right: 50px;
+    &__text {
+      color: black;
+      font-size: 20px;
+    }
+    &__bold {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 20px;
+    }
+    &__table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 15px;
+      margin-top: 50px;
+    }
+
+    &__thead {
+      display: none;
+    }
+
+    &__tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+    }
+
+    &__th {
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+    }
+    &__td {
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.5);
+      }
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__back-link {
+      margin-top: 40px;
+      background-color: rgb(226, 135, 67, 0.5);
+      font-size: 15px;
+      padding: 10px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    &__link {
+      text-decoration: none;
+      list-style-type: none;
+      cursor: pointer;
+
+      &:visited {
+        color: black;
+      }
+    }
+  }
+}
+
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .orders-details {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
     &__text {
       color: black;
       font-size: 10px;
@@ -177,13 +258,6 @@ $breakpoint-tall: 1200px;
       display: flex;
       flex-direction: row;
     }
-  }
-}
-
-/* Medium screen (tablets) */
-@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
-  .orders {
-    // Add styles for medium screens here
   }
 }
 

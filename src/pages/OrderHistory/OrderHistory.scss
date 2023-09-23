@@ -267,13 +267,14 @@
 
   // Width breakpoints
   $breakpoint-small: 420px;
-  $breakpoint-medium: 768px;
+  $breakpoint-medium: 820px;
   $breakpoint-large: 992px;
   $breakpoint-xlarge: 1200px;
 
   // Height breakpoints
   $breakpoint-short: 600px;
   $breakpoint-medium-height: 920px;
+  $breakpoint-medium-height-2: 1180px;
   $breakpoint-tall: 1200px;
   /* Small screen (smartphones) */
   @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
@@ -335,9 +336,61 @@
   }
 
   /* Medium screen (tablets) */
-  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
     .history {
-      // Add styles for medium screens here
+      height: 100%;
+
+      &__table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+        font-size: 10px;
+        margin-top: 20px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      &__thead {
+        display: none;
+      }
+
+      &__tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(226, 135, 65, 0.3);
+        }
+      }
+
+      &__th {
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+      }
+      &__td {
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+
+        &--index {
+          background-color: rgb(226, 135, 65, 0.5);
+        }
+      }
+
+      &__title {
+        font-size: 2rem;
+        margin-top: 80px;
+        font-family: "Josefin Sans", sans-serif;
+        &--details {
+          font-size: 1rem;
+          margin-top: 0;
+          text-align: center;
+          color: #e28741;
+          font-style: italic;
+        }
+      }
     }
   }
 

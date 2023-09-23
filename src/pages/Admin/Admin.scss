@@ -6,17 +6,34 @@
   }
   &__content {
     width: 100%;
-    padding-left: 1rem;
+ 
   }
 }
+// Width breakpoints
 $breakpoint-small: 420px;
-$breakpoint-medium: 768px;
+$breakpoint-medium: 820px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
 
+// Height breakpoints
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
+
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .admin {
+    display: block;
+
+    &__navbar {
+      width: 100%;
+      height: 100%;
+    }
+ 
+  }
+}
+
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .admin {
@@ -26,17 +43,11 @@ $breakpoint-tall: 1200px;
       width: 100%;
       height: 100%;
     }
-    &__content {
-      padding-left: 0rem;
-    }
+ 
   }
 }
 
-/* Medium screen (tablets) */
-@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
-  .admin {
-  }
-}
+
 
 /* Large screen (laptops/desktops) */
 @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import useFetchDetails from "../../customHooks/useFetchDetails";
 import "./OrderDetails.scss";
+import Loader from "../../Loader/Loader";
 const OrderDetails = () => {
   const [order, setOrder] = useState(null);
   const { id } = useParams();
@@ -41,10 +42,14 @@ const OrderDetails = () => {
           &larr; My Orders
         </Link>
       </div>
+
       {order === null ? (
-        <p className="order-d__title">
-          We're not able to display your order d, Try again!
-        </p>
+        <>
+          <Loader />
+          <p className="order-d__title">
+            We're not able to display your order d, Try again!
+          </p>
+        </>
       ) : (
         <>
           <div className="order-d__container-details">

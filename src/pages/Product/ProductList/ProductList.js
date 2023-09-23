@@ -52,7 +52,7 @@ const ProductList = ({ list }) => {
           </select>
         </div>
       </div>
-      <div id="products">
+      <div className="product-list__product-item" id="products">
         {list.length === 0 ? (
           <p>No Products found</p>
         ) : (

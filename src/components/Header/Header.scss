@@ -118,6 +118,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
   }
 
   &__link-cart {
@@ -150,14 +151,76 @@
 
   // Width breakpoints
   $breakpoint-small: 420px;
-  $breakpoint-medium: 768px;
+  $breakpoint-medium: 820px;
   $breakpoint-large: 992px;
   $breakpoint-xlarge: 1200px;
 
   // Height breakpoints
   $breakpoint-short: 600px;
   $breakpoint-medium-height: 920px;
+  $breakpoint-medium-height-2: 1180px;
   $breakpoint-tall: 1200px;
+
+  /* Medium screen (tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+    .header {
+      &__title-box {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        align-items: center;
+        &:visited {
+          color: black;
+        }
+      }
+      &__bubbles {
+        margin-left: 5px;
+      }
+      &__title {
+        font-size: 15px;
+      }
+
+      &__list-container {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+
+        justify-content: space-evenly;
+      }
+
+      &__item {
+        list-style-type: none;
+        font-family: "Josefin Sans", sans-serif;
+        padding: 0;
+        margin-right: 10px;
+      }
+
+      &__links {
+        &:hover {
+          border-bottom: 1px solid black;
+        }
+      }
+
+      &__userName {
+        display: none;
+      }
+
+      &__login-logo {
+        width: 30px;
+        height: 30px;
+      }
+      &__cart-logo {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+      }
+      &__text {
+        font-size: 15px;
+        padding: 0px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+    }
+  }
 
   /* Small screen (smartphones) */
   @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
@@ -211,19 +274,13 @@
         width: 20px;
         height: 20px;
         margin: 0;
+        padding: 10px;
       }
       &__text {
         font-size: 15px;
         padding: 0px;
         font-family: "Josefin Sans", sans-serif;
       }
-    }
-  }
-
-  /* Medium screen (tablets) */
-  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
-    .header {
-      // Add styles for medium screens here
     }
   }
 

@@ -63,14 +63,28 @@
     border: 1px solid black;
   }
 }
+// Width breakpoints
 $breakpoint-small: 420px;
-$breakpoint-medium: 768px;
+$breakpoint-medium: 820px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
 
+// Height breakpoints
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
+
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .view {
+    padding-left: 0px;
+    &__table {
+      font-size: 10px;
+      margin-top: 50px;
+    }
+  }
+}
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .view {
@@ -79,9 +93,8 @@ $breakpoint-tall: 1200px;
     &__title {
       text-align: center;
     }
-    
 
-    &__img{
+    &__img {
       width: 250px;
       height: 150px;
     }
@@ -130,13 +143,6 @@ $breakpoint-tall: 1200px;
     &__container-icon {
       justify-content: center;
     }
-  }
-}
-
-/* Medium screen (tablets) */
-@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
-  .view {
-    // Add styles for medium screens here
   }
 }
 

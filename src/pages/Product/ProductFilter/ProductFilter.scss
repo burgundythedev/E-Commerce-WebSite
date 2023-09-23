@@ -6,7 +6,6 @@
   &__title {
     text-align: start;
     font-size: 20px;
-
   }
   &__list {
     margin: 0;
@@ -31,7 +30,6 @@
     &--active {
       background-color: rgba(1, 127, 148, 0.2);
       box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-    
     }
   }
 
@@ -57,5 +55,130 @@
       box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
         rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
     }
+  }
+}
+// Width breakpoints
+$breakpoint-small: 420px;
+$breakpoint-medium: 820px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+// Height breakpoints
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
+$breakpoint-tall: 1200px;
+
+/* Medium Devices and Medium Height Devices */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .filter {
+    margin: 0px;
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      text-align: start;
+      font-size: 20px;
+    }
+    &__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__name-cat {
+      font-family: "Raleway", sans-serif;
+      background-color: rgb(204, 204, 204, 0.5);
+      padding: 10px;
+      margin: 10px;
+      position: relative;
+      list-style-type: none;
+      font-size: 17px;
+      border-radius: 15px;
+      width: 100px;
+      text-align: center;
+      cursor: pointer;
+      color: white;
+      &--active {
+        background-color: rgba(1, 127, 148, 0.2);
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+      }
+    }
+
+    &__button-container {
+      margin-top: 50px;
+    }
+    &__button {
+      font-family: "Raleway", sans-serif;
+      background-color: rgba(226, 135, 65, 0.2);
+      border-radius: 50px;
+      border-width: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 17px;
+      height: 44px;
+      line-height: 1.15;
+      padding: 0 25px;
+      position: relative;
+      text-align: center;
+      width: 9rem;
+
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+          rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+      }
+    }
+  }
+}
+/* Extra Small Devices and Short Height Devices */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  .filter {
+    &__top {
+      display: none;
+    }
+
+    &__label {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 0 5px;
+    }
+
+    &__select {
+      font-size: 1rem;
+      border: none;
+      border-bottom: 1px solid rgb(159, 207, 227, 0.5);
+      border-radius: 15px;
+      outline: none;
+      font-family: "Josefin Sans", sans-serif;
+      padding: 8px;
+      width: 200px;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+/* Medium Devices and Medium Height Devices */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
+  .filter {
+    // Your BEM styles for the .filter block on medium and medium height devices
+  }
+}
+
+/* Large Devices and Tall Height Devices */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+  .filter {
+    // Your BEM styles for the .filter block on large and tall height devices
+  }
+}
+
+/* Extra Large Devices */
+@media screen and (min-width: #{$breakpoint-xlarge + 1}) {
+  .filter {
+    // Your BEM styles for the .filter block on extra large devices
   }
 }

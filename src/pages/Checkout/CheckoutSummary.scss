@@ -74,14 +74,93 @@
     }
   }
 }
+// Width breakpoints
 $breakpoint-small: 420px;
-$breakpoint-medium: 768px;
+$breakpoint-medium: 820px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
 
+// Height breakpoints
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
+
+  /* Medium screen (tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+    .summary {
+      margin: 0px;
+
+      &__title {
+        font-size: 40px;
+  
+        &--amount {
+          font-size: 35px;
+        
+          margin: 0;
+        }
+        &--subtotal {
+          font-size: 35px;
+        
+          margin: 0;
+        }
+        &--total {
+          font-size: 35px;
+        
+          margin: 0;
+        }
+        &--name {
+          font-size: 25px;
+        
+        }
+        &--quantity {
+          font-size: 35px;
+        
+        }
+        &--price {
+          font-size: 20px;
+        
+        }
+        &--total-price {
+          font-size: 20px;
+        
+        }
+      }
+  
+      &__box-sub {
+        padding: 10px;
+        margin-right: 50px;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(226, 135, 65, 0.1);
+      }
+  
+      &__button {
+        font-family: "Raleway", sans-serif;
+        background-color: rgb(204, 204, 204, 0.5);
+        border-radius: 50px;
+        border-width: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 20px;
+        height: 55px;
+        line-height: 1.15;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        width: 15rem;
+        margin: 50px 0px 50px 0px;
+  
+        &:hover {
+          background-color: rgba(226, 135, 65, 0.3);
+          box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+            rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+        }
+      }    }
+  }
+
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .summary {
