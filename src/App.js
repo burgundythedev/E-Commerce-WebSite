@@ -26,7 +26,7 @@ import { Helmet } from "react-helmet";
 const App = () => {
   <Helmet>
     <meta charSet="utf-8" />
-    <title>E-COMMERCE</title>
+    <title>BurgundyTheDev Villa Bulle</title>
     <link
       rel="canonical"
       href="https://burgundythedev.github.io/e-commerceweb"
@@ -35,7 +35,7 @@ const App = () => {
   return (
     <React.Fragment>
       <ToastContainer />
-      <BrowserRouter basename="/e-commerceweb">
+      <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
