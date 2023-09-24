@@ -68,15 +68,15 @@ const CheckoutSummary = () => {
         {cartItems.length === 0 ? (
           <div className="summary__noitems">
             <p className="summary__title">No items in your cart</p>
-            <button className="summary__button-link">
-              <Link className="summary__link" to="/#product">
-                &larr; Back to Shop
-              </Link>
-            </button>
           </div>
         ) : (
           <div className="summary__sum">
             <div className="summary__container-order">
+              <div className="summary__return-link">
+                <Link className="summary__link" to="/#product">
+                  &larr; Back to Shop
+                </Link>
+              </div>
               {cartItems.map((item) => {
                 const { id, name, price, cartQuantity } = item;
                 return (
@@ -111,8 +111,8 @@ const CheckoutSummary = () => {
           </div>
         )}
       </div>
-      <Link className="summary__link" to="/checkout-success">
-        <button className="summary__button" onClick={saveOrder}>
+      <Link className="summary__return-link" to="/checkout-success">
+        <button className="summary__link" onClick={saveOrder}>
           Finalize your order
         </button>
       </Link>

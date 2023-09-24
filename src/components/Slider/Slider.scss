@@ -412,8 +412,8 @@ $breakpoint-tall: 1200px;
   }
 
   .content {
-    top: 27rem;
-    left: 5rem;
+    top: 20rem;
+    left: 0rem;
     flex-direction: column;
   }
 
@@ -437,7 +437,7 @@ $breakpoint-tall: 1200px;
   }
 
   .arrow {
-    background-color: rgba(81, 154, 196, 0.6);
+    background-color: rgba(81, 154, 196, 0.7);
     width: 1rem;
     height: 1rem;
   }
@@ -446,6 +446,9 @@ $breakpoint-tall: 1200px;
     justify-content: center;
   }
 }
+
+
+
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .slider {
@@ -453,7 +456,7 @@ $breakpoint-tall: 1200px;
   }
 
   .content {
-    top: 26rem;
+    top: 23rem;
     left: 0%;
     flex-direction: row;
   }
@@ -464,7 +467,7 @@ $breakpoint-tall: 1200px;
   }
 
   .text {
-    font-size: 20px;
+    font-size: 17px;
     margin-left: 0px;
   }
   .title {

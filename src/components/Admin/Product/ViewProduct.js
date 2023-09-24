@@ -47,7 +47,6 @@ const ViewProduct = () => {
             <table className="view__table">
               <thead className="view__thead">
                 <tr className="view__tr">
-                  <th className="view__th">N°</th>
                   <th className="view__th">Image</th>
                   <th className="view__th">Name</th>
                   <th className="view__th">Category</th>
@@ -60,7 +59,6 @@ const ViewProduct = () => {
                   const { id, name, price, imageUrl, category } = list;
                   return (
                     <tr key={id} className="view__tr">
-                      <td className="view__td">{index + 1}</td>
                       <td className="view__td">
                         <img
                           className="view__img"

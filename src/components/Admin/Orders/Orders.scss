@@ -2,6 +2,7 @@
   padding: 5px;
   width: 70%;
   min-height: 50vh;
+
   &__title {
     font-family: "Josefin Sans", sans-serif;
     font-size: 30px;
@@ -62,6 +63,81 @@ $breakpoint-xlarge: 1200px;
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
 $breakpoint-tall: 1200px;
+
+/* Extra-large screen (large desktops) */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+  .orders {
+    // Add styles for extra-large screens here
+  }
+}
+
+/* Large screen (laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  .orders {
+    // Add styles for large screens here
+  }
+}
+
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+  .orders {
+    padding: 0px;
+    width: 100%;
+    &__text {
+      color: black;
+      font-size: 15px;
+    }
+    &__bold {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 15px;
+    }
+    &__table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 15px;
+      margin-top: 50px;
+    }
+
+    &__thead {
+      display: none;
+    }
+
+    &__tr {
+      display: flex;
+      flex-direction: column;
+    
+
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+    }
+
+    &__th {
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+    }
+    &__td {
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.5);
+      }
+    }
+
+    &__title {
+      text-align: center;
+    }
+  }
+}
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .orders {
@@ -120,27 +196,6 @@ $breakpoint-tall: 1200px;
     &__title {
       text-align: center;
     }
-  }
-}
-
-/* Medium screen (tablets) */
-@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
-  .orders {
-    // Add styles for medium screens here
-  }
-}
-
-/* Large screen (laptops/desktops) */
-@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
-  .orders {
-    // Add styles for large screens here
-  }
-}
-
-/* Extra-large screen (large desktops) */
-@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
-  .orders {
-    // Add styles for extra-large screens here
   }
 }
 

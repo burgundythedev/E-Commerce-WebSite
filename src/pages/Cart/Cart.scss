@@ -15,6 +15,13 @@
   padding: 50px;
   border-radius: 50px;
 
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__item {
     display: flex;
     flex-direction: row;
@@ -73,7 +80,6 @@
     &:visited {
       color: black;
     }
-
   }
   &__button {
     border: 1px solid grey;
@@ -162,18 +168,181 @@
     color: rgb(226, 135, 67, 0.7);
   }
 }
-  // Width breakpoints
-  $breakpoint-small: 420px;
-  $breakpoint-medium: 820px;
-  $breakpoint-large: 992px;
-  $breakpoint-xlarge: 1200px;
+// Width breakpoints
+$breakpoint-small: 420px;
+$breakpoint-medium: 820px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1700px;
 
-  // Height breakpoints
-  $breakpoint-short: 600px;
-  $breakpoint-medium-height: 920px;
-  $breakpoint-medium-height-2: 1180px;
-  $breakpoint-tall: 1200px;
+// Height breakpoints
+$breakpoint-short: 600px;
+$breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
+$breakpoint-tall: 1200px;
 
+/* Medium Devices and Medium Height Devices */
+@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-medium-height}) {
+  .cart {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  
+    &__img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &__description-box {
+      margin-left: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__text {
+      text-align: center;
+      font-size: 15px;
+      margin-left: 50px;
+      margin-right: 50px;
+      &--price {
+        font-family: "Raleway", sans-serif;
+        font-size: 30px;
+      }
+    }
+
+    &__bar-container {
+      display: flex;
+      justify-content: center;
+    }
+    &__bar {
+      background-color: #ccc;
+      height: 1px;
+      width: 90%;
+    }
+
+    &__continue-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0px;
+    }
+    &__continue {
+      margin-bottom: 25px;
+      text-decoration: none;
+      list-style-type: none;
+      cursor: pointer;
+      font-size: 25px;
+      color: rgb(226, 135, 67, 1);
+      &:visited {
+        color: black;
+      }
+      &:hover {
+        color: rgb(226, 135, 67, 1);
+      }
+    }
+    &__button {
+      border: 1px solid grey;
+      background-color: black;
+
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      &--right {
+        margin-left: 1rem;
+      }
+      &--left {
+        margin-right: 1rem;
+      }
+      &--clear {
+        background-color: rgb(226, 135, 67, 0.4);
+        border-radius: 50px;
+        border-width: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 20px;
+        height: 44px;
+        line-height: 1.15;
+        margin: 0;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        font-family: "Josefin Sans", sans-serif;
+        width: 15rem;
+
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+            rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+        }
+      }
+
+      &--checkout {
+        background-color: rgb(226, 135, 67, 0.4);
+        border-radius: 50px;
+        border-width: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 20px;
+        height: 44px;
+        line-height: 1.15;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        font-family: "Josefin Sans", sans-serif;
+        margin-bottom: 25px;
+        width: 15rem;
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+            rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+        }
+      }
+    }
+
+    &__summary {
+      margin-right: 0px;
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__checkout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item-quantity {
+      font-size: 20px;
+    }
+
+    &__subtotal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__price {
+      margin-left: 0px;
+      font-family: "Raleway", sans-serif;
+      font-size: 30px;
+      margin-top: 0;
+      color: rgb(226, 135, 67, 1);
+    }
+
+    &__total-quantity {
+      font-size: 25px;
+      margin: 20px;
+      color: rgb(226, 135, 67, 0.7);
+    }
+  }
+}
 /* Extra Small Devices and Short Height Devices */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .cart {
@@ -352,12 +521,11 @@
     &__container {
       margin-top: 50px;
     }
-    &__empty{
+    &__empty {
       margin-top: 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
-     
     }
     &__item {
       display: flex;
@@ -511,26 +679,8 @@
       font-size: 25px;
       margin: 20px;
       color: rgb(226, 135, 67, 0.7);
-    }  }
-}
-
-/* Medium Devices and Medium Height Devices */
-@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
-  .cart {
-    // Your BEM styles for the .cart block on medium and medium height devices
+    }
   }
 }
 
-/* Large Devices and Tall Height Devices */
-@media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
-  .cart {
-    // Your BEM styles for the .cart block on large and tall height devices
-  }
-}
 
-/* Extra Large Devices */
-@media screen and (min-width: #{$breakpoint-xlarge + 1}) {
-  .cart {
-    // Your BEM styles for the .cart block on extra large devices
-  }
-}

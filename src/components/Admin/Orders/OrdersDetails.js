@@ -61,7 +61,6 @@ const OrdersDetails = () => {
               </p>
             </div>
           </div>
-
           <table className="orders-details__table">
             <thead className="orders-details__thead">
               <tr className="orders-details__tr">

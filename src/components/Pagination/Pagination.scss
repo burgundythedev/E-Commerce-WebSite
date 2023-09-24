@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-width: 100%;
+
   &__hidden {
     display: none;
   }
@@ -59,13 +59,14 @@ $breakpoint-medium-height: 920px;
 $breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
 
-
-  /* Medium Devices and Medium Height Devices */
-  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
-    .pagination {
-      // Your BEM styles for the .pagination block on medium and medium height devices
+/* Medium Devices and Medium Height Devices */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .pagination {
+    &__total-box {
+      display: none;
     }
   }
+}
 /* Extra Small Devices and Short Height Devices */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .pagination {
@@ -79,7 +80,6 @@ $breakpoint-tall: 1200px;
     }
     &__li {
       font-size: 1rem;
-   
     }
     &__li--active {
       font-size: 2rem;
@@ -92,9 +92,6 @@ $breakpoint-tall: 1200px;
       display: none;
     }
   }
-
-
-
 
   /* Large Devices and Tall Height Devices */
   @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {

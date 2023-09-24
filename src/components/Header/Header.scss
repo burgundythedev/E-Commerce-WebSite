@@ -12,12 +12,15 @@
     }
   }
   &__list-container {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   &__title-box {
+    margin-left: 50px;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -74,8 +77,7 @@
   &__item {
     list-style-type: none;
     font-family: "Josefin Sans", sans-serif;
-
-    padding: 20px;
+    padding: 10px;
   }
 
   &__links {
@@ -118,7 +120,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
   }
 
   &__link-cart {
@@ -150,17 +151,31 @@
   }
 
   // Width breakpoints
-  $breakpoint-small: 420px;
+  $breakpoint-small: 450px;
   $breakpoint-medium: 820px;
-  $breakpoint-large: 992px;
-  $breakpoint-xlarge: 1200px;
+  $breakpoint-large: 1200px;
+  $breakpoint-xlarge: 1500px;
 
   // Height breakpoints
   $breakpoint-short: 600px;
   $breakpoint-medium-height: 920px;
   $breakpoint-medium-height-2: 1180px;
-  $breakpoint-tall: 1200px;
+  $breakpoint-tall: 1400px;
 
+  /* Extra-large screen (large desktops) */
+  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
+    .header {
+      // Add styles for extra-large screens here
+    }
+  }
+
+ 
+  /* Portrait orientation (common for smartphones and some tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+    .header {
+      // Add styles for screens in portrait orientation here
+    }
+  }
   /* Medium screen (tablets) */
   @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
     .header {
@@ -177,14 +192,15 @@
         margin-left: 5px;
       }
       &__title {
-        font-size: 15px;
+        font-size: 25px;
       }
 
       &__list-container {
         display: flex;
         flex-direction: row;
         width: 60%;
-
+        margin-left: 50px;
+        margin-right: 50px;
         justify-content: space-evenly;
       }
 
@@ -235,21 +251,23 @@
         }
       }
       &__bubbles {
-        margin-left: 5px;
+        margin-right: 15px;
       }
       &__title {
-        font-size: 15px;
+        font-size: 17px;
       }
 
       &__list-container {
         display: flex;
         flex-direction: row;
         width: 60%;
-
+        margin-left: 0px;
+       
         justify-content: space-evenly;
       }
 
       &__item {
+        
         list-style-type: none;
         font-family: "Josefin Sans", sans-serif;
         padding: 0;
@@ -267,8 +285,8 @@
       }
 
       &__login-logo {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
       }
       &__cart-logo {
         width: 20px;
@@ -284,26 +302,7 @@
     }
   }
 
-  /* Large screen (laptops/desktops) */
-  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
-    .header {
-      // Add styles for large screens here
-    }
-  }
 
-  /* Extra-large screen (large desktops) */
-  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
-    .header {
-      // Add styles for extra-large screens here
-    }
-  }
-
-  /* Portrait orientation (common for smartphones and some tablets) */
-  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
-    .header {
-      // Add styles for screens in portrait orientation here
-    }
-  }
 
   /* Landscape orientation (common for tablets and some laptops/desktops) */
   @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {

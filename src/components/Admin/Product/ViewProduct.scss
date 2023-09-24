@@ -66,8 +66,8 @@
 // Width breakpoints
 $breakpoint-small: 420px;
 $breakpoint-medium: 820px;
-$breakpoint-large: 992px;
-$breakpoint-xlarge: 1200px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1700px;
 
 // Height breakpoints
 $breakpoint-short: 600px;
@@ -78,10 +78,48 @@ $breakpoint-tall: 1200px;
 /* Medium screen (tablets) */
 @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
   .view {
+    &__tr {
+      margin-bottom: 20px;
+
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+    }
+
+    &__th {
+      text-align: center;
+      padding: 5px;
+    }
+    &__td {
+      font-size: 10px;
+      padding: 5px;
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.5);
+      }
+    }
     padding-left: 0px;
     &__table {
       font-size: 10px;
       margin-top: 50px;
+    }
+
+    &__img{
+      width: 80px;
+      height: 80px;
+    }
+
+    &__icon{
+      width: 20px;
+      margin: 10px;
+      background-color: rgb(159, 207, 227, 0.5);
+      padding: 5px;
+      border-radius: 50px;
     }
   }
 }

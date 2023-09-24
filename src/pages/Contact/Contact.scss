@@ -332,16 +332,42 @@
   // Width breakpoints
   $breakpoint-small: 420px;
   $breakpoint-medium: 820px;
-  $breakpoint-large: 992px;
-  $breakpoint-xlarge: 1200px;
+  $breakpoint-large: 1200px;
+  $breakpoint-xlarge: 1700px;
 
   // Height breakpoints
   $breakpoint-short: 600px;
   $breakpoint-medium-height: 920px;
   $breakpoint-medium-height-2: 1180px;
   $breakpoint-tall: 1200px;
-  /* Small screen (smartphones) */
-  @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+  /* Medium screen (tablets) */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height-2}) {
+    .contact-form {
+
+      &__input {
+        margin-top: 15px;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid rgb(226, 135, 67, 0.5);
+        border-radius: 10px;
+        font-size: 16px;
+        &:focus {
+          outline: none;
+          border-color: rgb(159, 207, 227, 1);
+        }
+      }
+      &__container {
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
+      }
+    }
+  }
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
     .contact-form {
       &__background span {
         width: 1vmin;
@@ -398,9 +424,7 @@
       }
     }
   }
-
-  /* Medium screen (tablets) */
-  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
+  @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
     .contact-form {
       &__background span {
         width: 1vmin;

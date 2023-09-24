@@ -32,16 +32,26 @@
     margin-left: 50px;
   }
 }
+// Width breakpoints
 $breakpoint-small: 420px;
-$breakpoint-medium: 768px;
-$breakpoint-large: 992px;
-$breakpoint-xlarge: 1200px;
+$breakpoint-medium: 820px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1700px;
 
+// Height breakpoints
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
+$breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
-/* Small screen (smartphones) */
-@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+
+/* Large screen (laptops/desktops) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  .home-admin {
+    // Add styles for large screens here
+  }
+}
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
   .home-admin {
     display: flex;
     flex-direction: column;
@@ -52,7 +62,6 @@ $breakpoint-tall: 1200px;
     &__title {
       font-family: "Josefin Sans", sans-serif;
       font-size: 40px;
- 
 
       &--title {
         margin-left: 0px;
@@ -79,22 +88,48 @@ $breakpoint-tall: 1200px;
     }
     &__order-container {
       margin-left: 0px;
-
     }
   }
 }
-
-/* Medium screen (tablets) */
-@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+/* Small screen (smartphones) */
+@media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .home-admin {
-    // Add styles for medium screens here
-  }
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(159, 207, 227, 0.2);
+    min-height: 90vh;
 
-/* Large screen (laptops/desktops) */
-@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
-  .home-admin {
-    // Add styles for large screens here
+    &__title {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 40px;
+
+      &--title {
+        margin-left: 0px;
+        font-size: 30px;
+      }
+      &--chart {
+        display: none;
+      }
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__info-box {
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    &__chart-container {
+      width: 50%;
+    }
+    &__order-container {
+      margin-left: 0px;
+    }
   }
 }
 

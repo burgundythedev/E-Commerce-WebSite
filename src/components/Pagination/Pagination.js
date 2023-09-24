@@ -82,11 +82,6 @@ const Pagination = ({
       >
         <div className="pagination__arrow-next" alt="arrow-slider"></div>
       </li>
-      <li className="pagination__total-box">
-        <b className="pagination__page"> {currentPage}</b>
-        <span> of </span>
-        <b>{totalPages}</b>
-      </li>
     </ul>
   );
 };

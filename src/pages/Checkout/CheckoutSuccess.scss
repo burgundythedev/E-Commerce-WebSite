@@ -40,6 +40,21 @@ $breakpoint-xlarge: 1200px;
 $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
 $breakpoint-tall: 1200px;
+
+  /* Medium screen (tablets) */
+  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
+    .success {
+      margin: 0px;
+
+      &__title {
+        font-size: 25px;
+      }
+      &__button {
+        font-size: 20px;
+        width: 15rem;
+      }
+    }    
+  }
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .success {
@@ -54,12 +69,7 @@ $breakpoint-tall: 1200px;
     }
   }
 
-  /* Medium screen (tablets) */
-  @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height}) {
-    .success {
-      // Add styles for medium screens here
-    }
-  }
+
 
   /* Large screen (laptops/desktops) */
   @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {

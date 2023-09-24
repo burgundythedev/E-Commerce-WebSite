@@ -225,7 +225,7 @@ const AddProduct = () => {
                 onChange={handleAddProductInput}
               ></textarea>
             </div>
-            <div className="addproduct__container">
+            <div className="addproduct__container-button">
               <button className="addproduct__button" type="submit">
                 {detectForm(id, " Upload Product", "Edit Product")}
               </button>

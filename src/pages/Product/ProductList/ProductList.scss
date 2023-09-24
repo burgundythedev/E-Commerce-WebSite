@@ -41,7 +41,36 @@ $breakpoint-short: 600px;
 $breakpoint-medium-height: 920px;
 $breakpoint-medium-height-2: 1180px;
 $breakpoint-tall: 1200px;
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .product-list {
+    margin-bottom: 100px;
+    &__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      border-bottom: none;
+    }
 
+    &__label {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 0 5px;
+    }
+
+    &__select {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    &__product-item {
+      margin-bottom: 100px;
+    }
+    &__item {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
 /* Medium Devices and Medium Height Devices */
 @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
   .product-list {

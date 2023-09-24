@@ -49,7 +49,7 @@ const OrderHistory = () => {
       </div>
       <h3 className="history__title">Your Order History</h3>
       <>
-        <div>
+        <div className="history__container">
           <h3 className="history__title history__title--details">
             Click on your order to see Details
           </h3>

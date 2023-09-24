@@ -295,15 +295,82 @@
   // Width breakpoints
   $breakpoint-small: 420px;
   $breakpoint-medium: 820px;
-  $breakpoint-large: 992px;
-  $breakpoint-xlarge: 1200px;
+  $breakpoint-large: 1200px;
+  $breakpoint-xlarge: 1700px;
 
   // Height breakpoints
   $breakpoint-short: 600px;
   $breakpoint-medium-height: 920px;
   $breakpoint-medium-height-2: 1180px;
   $breakpoint-tall: 1200px;
-/* Small screen (smartphones) */
+
+
+
+/* Medium screen (tablets) */
+@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height-2}) {
+  .order-d {
+    height: 100%;
+    &__back-link {
+      font-size: 15px;
+    }
+    &__text {
+      color: black;
+      font-size: 15px;
+    }
+    &__bold {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 15px;
+    }
+    &__table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      width: 300px;
+
+      font-size: 15px;
+      margin-top: 100px;
+    }
+
+    &__thead {
+      display: none;
+    }
+
+    &__tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.3);
+      }
+    }
+
+    &__th {
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+    }
+    &__td {
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+
+      &--index {
+        background-color: rgb(226, 135, 65, 0.5);
+      }
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .order-d {
     height: 100%;
@@ -369,71 +436,7 @@
   }
 }
 
-/* Medium screen (tablets) */
-@media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
-  .order-d {
-    height: 100%;
-    &__back-link {
-      font-size: 15px;
-    }
-    &__text {
-      color: black;
-      font-size: 15px;
-    }
-    &__bold {
-      font-family: "Josefin Sans", sans-serif;
-      font-size: 15px;
-    }
-    &__table {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 50px;
-      width: 300px;
 
-      font-size: 15px;
-      margin-top: 100px;
-    }
-
-    &__thead {
-      display: none;
-    }
-
-    &__tr {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-
-      cursor: pointer;
-      &:hover {
-        background-color: rgb(226, 135, 65, 0.3);
-      }
-
-      &--index {
-        background-color: rgb(226, 135, 65, 0.3);
-      }
-    }
-
-    &__th {
-      text-align: center;
-      padding: 5px;
-      border: 1px solid black;
-    }
-    &__td {
-      text-align: center;
-      padding: 5px;
-      border: 1px solid black;
-
-      &--index {
-        background-color: rgb(226, 135, 65, 0.5);
-      }
-    }
-
-    &__title {
-      font-size: 2rem;
-    }
-  }
-}
 
 /* Large screen (laptops/desktops) */
 @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {

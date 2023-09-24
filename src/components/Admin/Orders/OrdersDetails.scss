@@ -1,4 +1,5 @@
 .orders-details {
+  margin-right: 50px;
   margin-left: 50px;
   min-height: 90vh;
   &__table {
@@ -12,9 +13,10 @@
 
   &__back-link {
     margin-top: 80px;
+    width: 40%;
     font-family: "Josefin Sans", sans-serif;
     font-size: 25px;
-    background-color: rgb(226, 135, 67, 0.5);
+    background-color: rgb(226, 135, 67, 0.2);
     padding: 10px;
     border-radius: 15px;
     text-align: center;
@@ -101,14 +103,14 @@ $breakpoint-tall: 1200px;
 /* Large screen (laptops/desktops) */
 @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
   .orders-details {
-    margin-right: 50px;
+
   }
 }
 
 /* Medium screen (tablets) */
 @media screen and (max-width: #{$breakpoint-medium}) and (max-height: #{$breakpoint-medium-height-2}) {
   .orders-details {
-    margin-right: 50px;
+
     &__text {
       color: black;
       font-size: 20px;
@@ -155,7 +157,7 @@ $breakpoint-tall: 1200px;
       border: 1px solid black;
 
       &--index {
-        background-color: rgb(226, 135, 65, 0.5);
+        background-color: rgb(226, 135, 65, 0.2);
       }
     }
 
@@ -165,7 +167,7 @@ $breakpoint-tall: 1200px;
 
     &__back-link {
       margin-top: 40px;
-      background-color: rgb(226, 135, 67, 0.5);
+      background-color: rgb(226, 135, 67, 0.2);
       font-size: 15px;
       padding: 10px;
       border-radius: 15px;
@@ -186,8 +188,7 @@ $breakpoint-tall: 1200px;
 /* Small screen (smartphones) */
 @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
   .orders-details {
-    margin-left: 0px;
-    margin-right: 0px;
+   
     &__text {
       color: black;
       font-size: 10px;
@@ -234,7 +235,7 @@ $breakpoint-tall: 1200px;
       border: 1px solid black;
 
       &--index {
-        background-color: rgb(226, 135, 65, 0.5);
+        background-color: rgb(226, 135, 65, 0.2);
       }
     }
 
@@ -244,8 +245,8 @@ $breakpoint-tall: 1200px;
 
     &__back-link {
       margin-top: 40px;
-      background-color: rgb(226, 135, 67, 0.5);
-      font-size: 15px;
+      background-color: rgb(226, 135, 67, 0.2);
+      font-size: 10px;
       padding: 10px;
       border-radius: 15px;
       text-align: center;

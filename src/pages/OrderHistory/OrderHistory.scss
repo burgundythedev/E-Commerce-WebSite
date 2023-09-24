@@ -1,20 +1,21 @@
 .history {
   display: flex;
   align-items: center;
-
-  min-height: 100%;
-
   flex-direction: column;
+  justify-content: center;
+
+  min-height: 90vh;
+
   &__table {
     max-width: 1700px;
     border-collapse: collapse;
-    width: 100%;
     font-size: 25px;
     margin-top: 80px;
+    margin-bottom: 80px;
     font-family: "Josefin Sans", sans-serif;
   }
   &__title {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-top: 80px;
     font-family: "Josefin Sans", sans-serif;
     &--details {
@@ -268,60 +269,35 @@
   // Width breakpoints
   $breakpoint-small: 420px;
   $breakpoint-medium: 820px;
-  $breakpoint-large: 992px;
-  $breakpoint-xlarge: 1200px;
+  $breakpoint-large: 1200px;
+  $breakpoint-xlarge: 1700px;
 
   // Height breakpoints
   $breakpoint-short: 600px;
   $breakpoint-medium-height: 920px;
   $breakpoint-medium-height-2: 1180px;
   $breakpoint-tall: 1200px;
-  /* Small screen (smartphones) */
-  @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
+
+  /* Large screen bis(laptops/desktops) */
+  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
     .history {
-      height: 100%;
-
-      &__table {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 100px;
-        font-size: 10px;
-        margin-top: 20px;
-        font-family: "Josefin Sans", sans-serif;
-      }
-
-      &__thead {
-        display: none;
-      }
-
-      &__tr {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        cursor: pointer;
-        &:hover {
-          background-color: rgb(226, 135, 65, 0.3);
-        }
-      }
-
-      &__th {
-        text-align: center;
-        padding: 5px;
-        border: 1px solid black;
-      }
       &__td {
         text-align: center;
         padding: 5px;
+        font-size: 15px;
         border: 1px solid black;
 
         &--index {
           background-color: rgb(226, 135, 65, 0.5);
         }
       }
-
+    }
+  }
+  /* Large screen (laptops/desktops) */
+  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+    .history {
       &__title {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-top: 80px;
         font-family: "Josefin Sans", sans-serif;
         &--details {
@@ -330,6 +306,20 @@
           text-align: center;
           color: #e28741;
           font-style: italic;
+        }
+      }
+
+      &__th {
+        font-size: 15px;
+      }
+      &__td {
+        text-align: center;
+        padding: 5px;
+        font-size: 10px;
+        border: 1px solid black;
+
+        &--index {
+          background-color: rgb(226, 135, 65, 0.5);
         }
       }
     }
@@ -373,7 +363,6 @@
         text-align: center;
         padding: 5px;
         border: 1px solid black;
-
         &--index {
           background-color: rgb(226, 135, 65, 0.5);
         }
@@ -394,17 +383,62 @@
     }
   }
 
-  /* Large screen (laptops/desktops) */
-  @media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-tall}) {
+  /* Small screen (smartphones) */
+  @media screen and (max-width: #{$breakpoint-small}) and (max-height: #{$breakpoint-medium-height}) {
     .history {
-      // Add styles for large screens here
-    }
-  }
+      height: 100%;
 
-  /* Extra-large screen (large desktops) */
-  @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
-    .history {
-      // Add styles for extra-large screens here
+      &__table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-size: 10px;
+        margin-top: 20px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      &__thead {
+        display: none;
+      }
+
+      &__tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(226, 135, 65, 0.3);
+        }
+      }
+
+      &__th {
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+      }
+      &__td {
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+
+        &--index {
+          background-color: rgb(226, 135, 65, 0.5);
+        }
+      }
+
+      &__title {
+        font-size: 2rem;
+        margin-top: 80px;
+        font-family: "Josefin Sans", sans-serif;
+        &--details {
+          font-size: 1rem;
+          margin-top: 0;
+          text-align: center;
+          color: #e28741;
+          font-style: italic;
+        }
+      }
     }
   }
 

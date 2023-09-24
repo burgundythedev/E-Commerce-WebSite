@@ -162,12 +162,6 @@ $breakpoint-tall: 1200px;
   }
 }
 
-/* Medium Devices and Medium Height Devices */
-@media screen and (max-width: #{$breakpoint-large}) and (max-height: #{$breakpoint-medium-height}) {
-  .filter {
-    // Your BEM styles for the .filter block on medium and medium height devices
-  }
-}
 
 /* Large Devices and Tall Height Devices */
 @media screen and (max-width: #{$breakpoint-xlarge}) and (max-height: #{$breakpoint-tall}) {
