@@ -1,18 +1,27 @@
 {
   "files": {
-    "main.css": "/e-commerceweb/static/css/main.49fe8116.css",
-    "main.js": "/e-commerceweb/static/js/main.ee566ff6.js",
-    "static/media/logo-website.jpg": "/e-commerceweb/static/media/logo-website.ffbdf0aec5d16c37ca91.jpg",
-    "static/media/loader.gif": "/e-commerceweb/static/media/loader.f0c52fd513bdbb3b757c.gif",
+    "main.css": "/e-commerceweb/static/css/main.cb9bd1b4.css",
+    "main.js": "/e-commerceweb/static/js/main.be5cdb5b.js",
+    "static/media/villabulle4.jpg": "/e-commerceweb/static/media/villabulle4.1c789015b1f78d8ca317.jpg",
+    "static/media/bubble.png": "/e-commerceweb/static/media/bubble.1ed206b6abafc4e8c404.png",
+    "static/media/villabulle2.jpg": "/e-commerceweb/static/media/villabulle2.e7ed65192f03d311c25e.jpg",
+    "static/media/villabulle1.jpg": "/e-commerceweb/static/media/villabulle1.9ce820738d052169f2ee.jpg",
+    "static/media/villabulle3.jpg": "/e-commerceweb/static/media/villabulle3.424c03208736bcb47085.jpg",
     "static/media/reset.png": "/e-commerceweb/static/media/reset.a82b8cd949f80a982795.png",
-    "static/media/login.png": "/e-commerceweb/static/media/login.232fbd4f7c41ffb3aa47.png",
-    "static/media/login-password.png": "/e-commerceweb/static/media/login-password.5bb9d84a8b1340178b91.png",
+    "static/media/adminuser.png": "/e-commerceweb/static/media/adminuser.3f4a197164c7bb95d45e.png",
+    "static/media/admin.png": "/e-commerceweb/static/media/admin.dca1dfdb45b76c62097c.png",
+    "static/media/logout.png": "/e-commerceweb/static/media/logout.e677b6d85b379773be6c.png",
+    "static/media/cart.png": "/e-commerceweb/static/media/cart.346296a85abd751223f7.png",
+    "static/media/login.png": "/e-commerceweb/static/media/login.bd00a6ce4f76110df38c.png",
+    "static/media/register.png": "/e-commerceweb/static/media/register.c7bd95d583bb13be795a.png",
+    "static/media/contact.png": "/e-commerceweb/static/media/contact.3ab7bcce1d7942a5ee3e.png",
+    "static/media/myorders.png": "/e-commerceweb/static/media/myorders.36cd8b719882cc16e717.png",
     "index.html": "/e-commerceweb/index.html",
-    "main.49fe8116.css.map": "/e-commerceweb/static/css/main.49fe8116.css.map",
-    "main.ee566ff6.js.map": "/e-commerceweb/static/js/main.ee566ff6.js.map"
+    "main.cb9bd1b4.css.map": "/e-commerceweb/static/css/main.cb9bd1b4.css.map",
+    "main.be5cdb5b.js.map": "/e-commerceweb/static/js/main.be5cdb5b.js.map"
   },
   "entrypoints": [
-    "static/css/main.49fe8116.css",
-    "static/js/main.ee566ff6.js"
+    "static/css/main.cb9bd1b4.css",
+    "static/js/main.be5cdb5b.js"
   ]
 }
