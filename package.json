@@ -2,7 +2,7 @@
   "name": "eshopproject",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://burgundythedev.github.io/e-commerce",
+  "homepage": "https://burgundythedev.github.io/evisit-villabulle",
 
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",

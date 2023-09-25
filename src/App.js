@@ -29,13 +29,13 @@ const App = () => {
     <title>E-COMMERCE</title>
     <link
       rel="canonical"
-      href="https://burgundythedev.github.io/e-commerceweb"
+      href="https://burgundythedev.github.io/evisit-villabulle"
     />
   </Helmet>;
   return (
     <React.Fragment>
       <ToastContainer />
-      <BrowserRouter basename="/e-commerce">
+      <BrowserRouter basename="/evisit-villabulle">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
